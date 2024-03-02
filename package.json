@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "james-gates-portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://james-gates-portfolio.vercel.app/",
@@ -38,11 +38,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run sitemap && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "sitemap": "node ./sitemap-generator.ts"
   },
   "eslintConfig": {
     "extends": [

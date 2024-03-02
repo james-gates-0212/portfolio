@@ -9,12 +9,13 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Preloader from './components/Pre';
 import ScrollToTop from './components/ScrollToTop';
+import Sitemap from './components/Sitemap';
 import Stars from './backgrounds/Stars';
 
 const isDevelopmentMode = process.env.NODE_ENV === 'development';
 const isProductionMode = process.env.NODE_ENV === 'production';
 
-function App() {
+const App = () => {
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
             {MainRoutes.map(({ route, element }, idx) => (
               <Route key={`route-${idx}`} path={route} element={element} />
             ))}
+            <Route path="sitemap.xml" element={<Sitemap />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />
@@ -52,6 +54,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
