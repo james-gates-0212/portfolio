@@ -1,20 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './style.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { MainRoutes } from './infos/MainRoutes';
+import { Tooltip } from 'react-tooltip';
+import { useState, useEffect } from 'react';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Preloader from './components/Pre';
+import ScrollToTop from './components/ScrollToTop';
+import Stars from './backgrounds/Stars';
+
+const isDevelopmentMode = process.env.NODE_ENV === 'development';
+const isProductionMode = process.env.NODE_ENV === 'production';
 
 function App() {
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    if (isDevelopmentMode) {
+      console.log('development', isDevelopmentMode);
+    }
+    if (isProductionMode) {
+      console.log('production', isProductionMode);
+    }
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Stars />
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? 'no-scroll' : 'scroll'}>
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            {MainRoutes.map(({ route, element }, idx) => (
+              <Route key={`route-${idx}`} path={route} element={element} />
+            ))}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+          <Tooltip anchorSelect=".title-tooltip" place="bottom" />
+        </div>
+      </Router>
+    </>
   );
 }
 
