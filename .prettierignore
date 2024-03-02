@@ -5,7 +5,6 @@
 .prettierignore
 build
 dist
-frontend
 node_modules
 
 # Ignore files
