@@ -4,11 +4,6 @@
   "private": true,
   "homepage": "https://james-gates-portfolio.vercel.app/",
   "dependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/plugin-syntax-flow": "^7.14.5",
-    "@babel/plugin-transform-react-jsx": "^7.14.9",
-    "@popperjs/core": "^2.11.8",
-    "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
