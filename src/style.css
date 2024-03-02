@@ -785,8 +785,9 @@ body {
   backdrop-filter: blur(2px) !important;
 }
 
+.vertical-timeline .vertical-timeline-element--work .vertical-timeline-element-content .vertical-timeline-element-title,
 .vertical-timeline
-  .vertical-timeline-element--work
+  .vertical-timeline-element--education
   .vertical-timeline-element-content
   .vertical-timeline-element-title {
   color: var(--bs-white);
