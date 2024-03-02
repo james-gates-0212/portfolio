@@ -1495,6 +1495,56 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz#d9fae00a2d5cb40f92cfe64b47ad749fbc38f917"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
+"@icongo/fc@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/fc/-/fc-1.2.0.tgz#9a7ba23683d0bde7619a49d873792b8b1e444351"
+  integrity sha512-iywNQ9EVOc8eKSD+RC7RU0jn3FYA6ZhHHESGZ1LLh5jSX7VDEa0xeRCPPzL4YM5ejkUuMHhSngIqL6ywW7ByYw==
+
+"@icongo/ic@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/ic/-/ic-1.2.0.tgz#b4bb7966dcb7d3901d68cd8f2d6b41df91cdcbc2"
+  integrity sha512-cDK6ZwVgA8IAeCoPnrxZCbXH4PyWIU/esFZGh1BCqlz2Rd5g7jl+dB6KZxZmqZDnl3xwU9VcaMttHKoG4trw9A==
+
+"@icongo/iu@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/iu/-/iu-1.2.0.tgz#7669669cd4d8657153494b203018b91aeda68c92"
+  integrity sha512-SgJT4XmC+oiIPGRcN9FUKD8jepXNTG6PC+BZJIpNfMSfnJ/Y+pVzC6ZPBo5UomqAs5sRIZUOc+53WJ2RpLodzg==
+
+"@icongo/la@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/la/-/la-1.2.0.tgz#a9a921189544b1b6c9a2f611c4df36d81b9b6c51"
+  integrity sha512-UENK7zjbx9l2/KecUUgRIpKKbPBW+xhADjqQ90azOeEe6eBoq5E1duf+7BB5U9sNBnD2E/JagnUHJL7D1bdqQA==
+
+"@icongo/lg@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/lg/-/lg-1.2.0.tgz#9b272e9946a71fcdea1b303404426c9d23b5dddf"
+  integrity sha512-biK2kTHuNqOaq5clCAgHNpAlKzd1OaiQNem61vQEF5iT2ASqAbzAW2aqKl9br8cEXjDI/KEqoyLNrVrngAHv+Q==
+
+"@icongo/si@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/si/-/si-1.2.0.tgz#a7278f64a27aacf463de16c5109d7f94384f00e3"
+  integrity sha512-PSMyRqOp8OFfWgpg8uBt7kgiyGpuvsAr36VJdsRo2KA4SsSH0aLroTFIYX0BOQthHEEg/+1pWc8WZF4H7QrAZA==
+
+"@icongo/sk@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/sk/-/sk-1.2.0.tgz#7c3346ab28a4ed0d20123b4613b23efc8bdfc8ed"
+  integrity sha512-O/mJHY3afOzMnpJ8KzHq883z3Wxq81wVOFO/ugHGkZFFIeYeLsaJI26cV0giLsJ3XPMK1VwH5kSakMhZkcqaJg==
+
+"@icongo/sn@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/sn/-/sn-1.2.0.tgz#95232b88ce91944bc36d196d867c7bdc30865eb3"
+  integrity sha512-YFOH4mxeLXv2a+K62lRq6LXohdvUkjE6hHqFzI5sWzvtMoa7XT/zj7k2MDqVukQVnkqv/m9BhRpwzGUhcLDzDg==
+
+"@icongo/sti@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/sti/-/sti-1.2.0.tgz#0ba7fe6580a50b69ea140445144bf387e03b5287"
+  integrity sha512-AQC97P20XGj5d9vEScbZSRJv92mikyPGj9SEa4gM3owC1ad2Q6FZ7GaokzI2SoUl8J0TcmqpdSsW/7fjmmrN0Q==
+
+"@icongo/vl@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/vl/-/vl-1.2.0.tgz#d003be1523e391f517ca46b203ebf8c8b37cdf2c"
+  integrity sha512-ZMeT0MD8n/7o/ifwNCq1ftyQSigyjvN6j52W91JGYaUpEBh9IWd3DTFuYqN2/I5jcM13l3w/8hRKz+26JRvsmg==
+
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@isaacs/cliui/-/cliui-8.0.2.tgz#b37667b7bc181c168782259bab42474fbf52b550"
