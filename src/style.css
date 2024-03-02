@@ -247,7 +247,7 @@ button:focus {
 .heading-name {
   font-size: 2.5em;
   padding-left: 50px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .main-name {
@@ -406,7 +406,7 @@ body {
   }
 }
 
-.footer h3 {
+.footer .h3 {
   font-size: 1em;
   color: white !important;
   margin-top: 0.5em !important;
@@ -785,10 +785,12 @@ body {
   backdrop-filter: blur(2px) !important;
 }
 
+.vertical-timeline .vertical-timeline-element--work .vertical-timeline-element-content .vertical-timeline-element-title,
 .vertical-timeline
-  .vertical-timeline-element--work
+  .vertical-timeline-element--education
   .vertical-timeline-element-content
   .vertical-timeline-element-title {
+  color: var(--bs-white);
   margin-top: 0.25em;
 }
 

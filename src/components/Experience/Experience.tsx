@@ -20,12 +20,12 @@ const Experience = () => (
               className={`vertical-timeline-element--${type}`}
               {...elementProps}
             >
-              <h4 className="vertical-timeline-element-title">{title}</h4>
-              <h5 className="vertical-timeline-element-subtitle">
+              <h2 className="h4 vertical-timeline-element-title">{title}</h2>
+              <h3 className="h5 vertical-timeline-element-subtitle">
                 <a href={site} target="_blank" rel="noreferrer">
                   {company}
                 </a>
-              </h5>
+              </h3>
               <address>{address}</address>
               {details && (
                 <ul>

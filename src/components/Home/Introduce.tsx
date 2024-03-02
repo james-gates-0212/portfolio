@@ -9,9 +9,9 @@ const Introduce = () => (
     <Container>
       <Row>
         <Col md={8} className="home-about-description">
-          <h1 style={{ fontSize: '2.6em' }}>
+          <div className="h1" style={{ fontSize: '2.6em' }}>
             LET ME <span className="purple"> INTRODUCE </span> MYSELF
-          </h1>
+          </div>
           <p className="home-about-body">
             A Passionate Full Stack Developer with 5+ years of experience in blending the art of design with skill of
             programming to maintain and optimize for performance of website.
@@ -25,13 +25,21 @@ const Introduce = () => (
         </Col>
         <Col md={4} className="myAvtar">
           <Tilt>
-            <img src={myImg} className="img-fluid" alt="avatar" />
+            <img
+              src={myImg}
+              className="img-fluid"
+              alt="Avatar"
+              width="645"
+              height="500"
+              title="Avatar"
+              loading="lazy"
+            />
           </Tilt>
         </Col>
       </Row>
       <Row>
         <Col md={12} className="home-about-social">
-          <h1>FIND ME ON</h1>
+          <div className="h1">FIND ME ON</div>
           <p>
             Feel free to <span className="purple">connect </span>with me
           </p>

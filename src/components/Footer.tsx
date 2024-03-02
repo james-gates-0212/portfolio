@@ -9,7 +9,7 @@ const Footer = () => {
     <Container fluid className="footer">
       <Row>
         <Col md="6" className="footer-copyright">
-          <h3>Copyright &copy; {year} James Gates</h3>
+          <div className="h3">Copyright &copy; {year} James Gates</div>
         </Col>
         <Col md="6" className="footer-body">
           <ul className="footer-icons">

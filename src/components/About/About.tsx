@@ -3,7 +3,6 @@ import { SNLightBulb } from '@icongo/sn';
 import Aboutcard from './AboutCard';
 import Github from './Github';
 import laptopImg from '../../assets/about.svg';
-import React from 'react';
 import Skillsets from './Skillsets';
 
 const About = () => (
@@ -12,37 +11,45 @@ const About = () => (
       <Row
         style={{
           justifyContent: 'center',
-          padding: '10px',
+          padding: 10,
         }}
       >
         <Col
           md={7}
           style={{
             justifyContent: 'center',
-            paddingTop: '30px',
-            paddingBottom: '50px',
+            paddingTop: 30,
+            paddingBottom: 50,
           }}
         >
           <h1
             style={{
               fontSize: '2.1em',
-              paddingBottom: '20px',
+              paddingBottom: 20,
             }}
           >
-            About
-            <strong className="purple"> Me</strong>
+            I'm glad to meet
+            <strong className="purple"> you</strong>
           </h1>
           <Aboutcard />
         </Col>
         <Col
           md={5}
           style={{
-            paddingTop: '120px',
-            paddingBottom: '50px',
+            paddingTop: 120,
+            paddingBottom: 50,
           }}
           className="about-img"
         >
-          <img src={laptopImg} alt="about" className="img-fluid" />
+          <img
+            src={laptopImg}
+            alt="About"
+            className="img-fluid"
+            width="600"
+            height="529"
+            title="About"
+            loading="lazy"
+          />
         </Col>
       </Row>
 
