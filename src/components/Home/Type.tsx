@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 const Type = () => (
   <Typewriter
     options={{
-      strings: ['MERN Stack Developer', 'Continuously Learning'],
+      strings: ['Senior Full Stack Developer', 'SEO Expert', 'Continuously Learning'],
       autoStart: true,
       loop: true,
       deleteSpeed: 50,

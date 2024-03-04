@@ -6,7 +6,9 @@ const AboutCard = () => (
     <Card.Body>
       <blockquote className="blockquote mb-0">
         <p style={{ textAlign: 'left' }}>
-          Hi, everyone, I'm James Gates. I'm full-stack developer and software development expert.
+          Hi, everyone, I'm <span className="purple">James Gates</span>.<br />
+          I'm <span className="purple">Senior Full Stack Developer</span> and <span className="purple">SEO Expert</span>
+          .
           <br />
           <br />I have 5+ years' experience for web development. During last years, I had earned many skills to develop
           and manage a website and it now helps for a new project to develop in a high quality, rapidly.
