@@ -1,7 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { LinkInfos } from '../../infos/Links';
 import myImg from '../../assets/avatar.svg';
-import React from 'react';
 import Tilt from 'react-parallax-tilt';
 
 const Introduce = () => (

@@ -1,7 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import homeLogo from '../../assets/home-main.svg';
 import Introduce from './Introduce';
-import React from 'react';
 import Type from './Type';
 import Meta from '../Meta';
 
