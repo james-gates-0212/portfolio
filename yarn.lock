@@ -1513,6 +1513,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz#d9fae00a2d5cb40f92cfe64b47ad749fbc38f917"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
+"@icongo/cg@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/cg/-/cg-1.2.0.tgz#e41e86c924cc86f533a8e3635427b59d9725787e"
+  integrity sha512-aQF20gA8tZ6y3+zESMxC2q2DbXMhtHsLLXfqmfT9aFfL8tFJJZx4EjhwA4Yc87WDTEKma+JT3Qajw5cW7q8f/A==
+
 "@icongo/fc@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@icongo/fc/-/fc-1.2.0.tgz#9a7ba23683d0bde7619a49d873792b8b1e444351"
@@ -1537,6 +1542,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@icongo/lg/-/lg-1.2.0.tgz#9b272e9946a71fcdea1b303404426c9d23b5dddf"
   integrity sha512-biK2kTHuNqOaq5clCAgHNpAlKzd1OaiQNem61vQEF5iT2ASqAbzAW2aqKl9br8cEXjDI/KEqoyLNrVrngAHv+Q==
+
+"@icongo/pp@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@icongo/pp/-/pp-1.2.0.tgz#962bfe855cdf98a9b285358ae5f2551682dfff5c"
+  integrity sha512-74tI5xhZnub2G1Tq12N/6uf53cGosi2E3zKhY0MKJbG9zOkEZsRgkNYF6WJ00H0PXJGnxVQG5VgnPf7x4Q0efA==
 
 "@icongo/si@^1.2.0":
   version "1.2.0"
@@ -10409,11 +10419,6 @@ react-helmet-async@^2.0.4:
     invariant "^2.2.4"
     react-fast-compare "^3.2.2"
     shallowequal "^1.1.0"
-
-react-icons@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.0.1.tgz#1694e11bfa2a2888cab47dcc30154ce90485feee"
-  integrity sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==
 
 react-intersection-observer@^8.26.2:
   version "8.34.0"

@@ -763,14 +763,14 @@ body {
 }
 
 .vertical-timeline address {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-500);
   line-height: 1;
   margin-top: 0.75em;
 }
 
 .vertical-timeline ul {
   margin-bottom: 0;
-  color: var(--bs-gray-400);
+  color: var(--bs-gray-300);
 }
 
 .vertical-timeline .vertical-timeline-element--work .vertical-timeline-element-content {

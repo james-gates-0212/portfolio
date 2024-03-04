@@ -3,7 +3,7 @@ import { IUMicrosoftOutlook } from '@icongo/iu';
 import { LGGithubIcon, LGGoogleGmail } from '@icongo/lg';
 import { VLSkype } from '@icongo/vl';
 
-export const LinkInfos = [
+const LinkInfos = [
   {
     href: 'mailto:james.gates.0212@gmail.com',
     icon: {
@@ -37,3 +37,5 @@ export const LinkInfos = [
     label: 'Github',
   },
 ];
+
+export default LinkInfos;

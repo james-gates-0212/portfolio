@@ -31,7 +31,7 @@ const VerticalTimelineElementData = ({ since, until, icon, ...props }: ITimeline
   ...props,
 });
 
-export const Experiences = [
+const Experiences = [
   VerticalTimelineElementData({
     type: 'education',
     icon: <ICIconEducation />,
@@ -112,3 +112,5 @@ export const Experiences = [
     ],
   }),
 ].sort(({ since: as, until: au }: any, { since: bs, until: bu }: any) => (as > bs || au > bu ? 1 : -1));
+
+export default Experiences;

@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { LinkInfos } from '../infos/Links';
+import LinkInfos from '../infos/Links';
 
 const Footer = () => {
   let date = new Date();
