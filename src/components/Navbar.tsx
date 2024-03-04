@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const NavBar = () => {
   const [expand, updateExpanded] = useState<boolean>(false);
-  const [navColour, updateNavbar] = useState<boolean>(false);
+  const [navColor, updateNavbar] = useState<boolean>(false);
 
   const { pathname } = useLocation();
 
@@ -23,7 +23,7 @@ const NavBar = () => {
   window.addEventListener('scroll', scrollHandler);
 
   return (
-    <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? 'sticky' : 'navbar'}>
+    <Navbar expanded={expand} fixed="top" expand="md" className={navColor ? 'sticky' : 'navbar'}>
       <Container>
         <Navbar.Brand as={Link} to={'/'} className="d-flex white">
           James Gates

@@ -121,6 +121,7 @@ button:focus {
     backdrop-filter: blur(15px) !important;
     box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
@@ -194,24 +195,33 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
@@ -254,6 +264,7 @@ button:focus {
   color: var(--imp-text-color) !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: var(--imp-text-color) !important;
@@ -265,18 +276,19 @@ button:focus {
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
 }
 
-.myAvtar {
+.myAvatar {
   justify-content: center !important;
   padding-top: 9em !important;
 }
 
 @media (max-width: 767px) {
-  .myAvtar {
+  .myAvatar {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
@@ -368,7 +380,7 @@ body {
   padding: 0 15px;
 }
 
-.icon-colour {
+.icon-color {
   color: var(--imp-text-color) !important;
 }
 
@@ -382,6 +394,7 @@ body {
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
 }
+
 .footer-copyright {
   text-align: center !important;
 }
@@ -407,6 +420,7 @@ body {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -416,6 +430,7 @@ body {
 .blockquote-footer {
   color: var(--imp-text-color) !important;
 }
+
 /* -------- */
 /* Projects */
 /* -------- */
@@ -441,6 +456,7 @@ body {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -501,10 +517,12 @@ body {
   background-color: #476affd7 !important;
   border-color: #476affd7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   display: flex;
   gap: 15px;
@@ -583,6 +601,7 @@ body {
     padding-top: 0 !important;
   }
 }
+
 /* ------ */
 /* Resume */
 /* ------ */
@@ -620,6 +639,7 @@ body {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -696,10 +716,12 @@ body {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -723,6 +745,7 @@ body {
   background-color: #476aff86 !important;
   border-color: #476aff86 !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
 }
@@ -734,33 +757,15 @@ body {
   margin: 0 auto;
 }
 
-.education-infos td {
-  vertical-align: top;
-  text-align: left;
-  font-size: 18px;
-  white-space: nowrap;
-}
-
-.education-infos td strong {
-  font-size: 20px;
-  color: var(--imp-text-color);
-}
-
-.education-infos td small {
-  font-size: 22px;
-}
-
-.education-infos td address {
-  font-size: 16px;
-  color: var(--bs-gray);
-}
-
-.education-infos td ul {
-  font-size: 16px;
+.vertical-timeline h2,
+.vertical-timeline h3 {
+  margin-bottom: 0.25em;
 }
 
 .vertical-timeline address {
   color: var(--bs-gray-600);
+  line-height: 1;
+  margin-top: 0.75em;
 }
 
 .vertical-timeline ul {

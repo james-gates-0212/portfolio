@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { SNLightBulb } from '@icongo/sn';
-import Aboutcard from './AboutCard';
+import AboutCard from './AboutCard';
 import Github from './Github';
 import laptopImg from '../../assets/about.svg';
 import Skillsets from './Skillsets';
@@ -37,7 +37,7 @@ const About = () => (
               I'm glad to meet
               <strong className="purple"> you</strong>
             </h1>
-            <Aboutcard />
+            <AboutCard />
           </Col>
           <Col
             md={5}
