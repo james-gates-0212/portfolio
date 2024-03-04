@@ -1,5 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
-import { Skillsets } from '../../infos/Skillsets';
+import Skillsets from '../../infos/Skillsets';
 
 const SkillSets = () => (
   <Row

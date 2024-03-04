@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { MainRoutes } from './infos/MainRoutes';
+import MainRoutes from './infos/MainRoutes';
 import { Tooltip } from 'react-tooltip';
 // import { useState, useEffect } from 'react';
 import Footer from './components/Footer';

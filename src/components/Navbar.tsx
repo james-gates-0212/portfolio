@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { MainRoutes } from '../infos/MainRoutes';
+import MainRoutes from '../infos/MainRoutes';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';

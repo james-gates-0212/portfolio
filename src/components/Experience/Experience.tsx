@@ -1,8 +1,7 @@
 import 'react-vertical-timeline-component/style.min.css';
 import { Container } from 'react-bootstrap';
-import { Experiences } from '../../infos/Experiences';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { SNStarAlt } from '@icongo/sn';
+import Experiences from '../../infos/Experiences';
+import { SNMapMarker, SNStarAlt } from '@icongo/sn';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import Meta from '../Meta';
 
@@ -34,7 +33,7 @@ const Experience = () => (
                   </a>
                 </h3>
                 <address className="d-flex flex-row column-gap-1 align-items-center">
-                  <FaMapMarkerAlt fontSize={14} /> <span>{address}</span>
+                  <SNMapMarker /> <span>{address}</span>
                 </address>
                 {details && (
                   <ul>
