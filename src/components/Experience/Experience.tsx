@@ -28,7 +28,7 @@ const Experience = () => (
               >
                 <h2 className="h4 vertical-timeline-element-title">{title}</h2>
                 <h3 className="h5 vertical-timeline-element-subtitle">
-                  <a href={site} target="_blank" rel="noreferrer">
+                  <a href={site} target="_blank" rel="noreferrer" aria-label={company}>
                     {company}
                   </a>
                 </h3>
