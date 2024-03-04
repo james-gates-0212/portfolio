@@ -28,9 +28,9 @@ const Meta = (props) => {
 };
 
 Meta.defaultProps = {
-  title: 'A Passionate Developer',
+  title: 'Senior Full Stack Developer & SEO Expert',
   description:
-    'A Passionate Full Stack Developer with 5+ years of experience in blending the art of design with skill of programming to maintain and optimize for performance of website.',
+    'As a seasoned Senior Full Stack Developer specializing in SEO and MERN Stack, I offer a proven track record of crafting resilient, intuitive web apps.',
   noIndex: false,
 };
 
