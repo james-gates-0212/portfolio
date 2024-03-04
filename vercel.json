@@ -1,8 +1,12 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.+)(.)(css|gif|html|ico|jpeg|jpg|js|json|map|mp3|png|svg|tff|wav|woff2)",
       "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        },
         {
           "key": "Cache-Control",
           "value": "max-age=31536000"
@@ -14,15 +18,6 @@
         {
           "key": "Vercel-CDN-Cache-Control",
           "value": "max-age=31536000"
-        }
-      ]
-    },
-    {
-      "source": "/(.+)(.)(css|gif|html|ico|jpeg|jpg|js|map|mp3|png|svg|tff|wav|woff2)",
-      "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
         }
       ]
     }
