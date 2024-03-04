@@ -17,7 +17,7 @@ const Meta = (props) => {
       {Boolean(description) && <meta itemProp="description" content={description} />}
       {Boolean(description) && <meta property="og:description" content={description} />}
       {Boolean(description) && <meta name="twitter:description" content={description} />}
-      <meta name="google-site-verification" content="OzjiYMkBNq55LQ6amr_RsMRYaiKwmHWBavwcFZ7e1dI" />
+      <meta name="google-site-verification" content="vSy6aBobFApUM2bc6BgZd2XYJQ8P3sFadIdTcEtClwY" />
       <link rel="canonical" href={metaUrl} />
       <meta property="og:url" content={metaUrl} />
       {Boolean(noIndex) && <meta name="robots" content="noindex" />}
