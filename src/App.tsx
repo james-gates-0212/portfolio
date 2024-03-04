@@ -4,40 +4,41 @@ import './style.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { MainRoutes } from './infos/MainRoutes';
 import { Tooltip } from 'react-tooltip';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Preloader from './components/Pre';
+// import Preloader from './components/Pre';
 import ScrollToTop from './components/ScrollToTop';
 import Sitemap from './components/Sitemap';
 import Stars from './backgrounds/Stars';
 
-const isDevelopmentMode = process.env.NODE_ENV === 'development';
-const isProductionMode = process.env.NODE_ENV === 'production';
+// const isDevelopmentMode = process.env.NODE_ENV === 'development';
+// const isProductionMode = process.env.NODE_ENV === 'production';
 
 const App = () => {
-  const [load, upadateLoad] = useState(true);
+  const load = false;
+  // const [load, updateLoad] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     updateLoad(false);
+  //   }, 1200);
 
-    if (isDevelopmentMode) {
-      console.log('development', isDevelopmentMode);
-    }
-    if (isProductionMode) {
-      console.log('production', isProductionMode);
-    }
+  //   if (isDevelopmentMode) {
+  //     console.log('development', isDevelopmentMode);
+  //   }
+  //   if (isProductionMode) {
+  //     console.log('production', isProductionMode);
+  //   }
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
       <Stars />
       <Router>
-        <Preloader load={load} />
+        {/* <Preloader load={load} /> */}
         <div className="App" id={load ? 'no-scroll' : 'scroll'}>
           <Navbar />
           <ScrollToTop />
