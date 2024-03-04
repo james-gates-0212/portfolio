@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*)(.)?(css|gif|html|ico|jpeg|jpg|js|map|mp3|png|svg|tff|wav|woff2)?",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Encoding",

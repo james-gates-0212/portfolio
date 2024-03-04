@@ -8,13 +8,16 @@
     ".jpeg",
     ".jpg",
     ".js",
+    ".json",
     ".map",
     ".mp3",
     ".png",
     ".svg",
+    ".txt",
     ".tff",
     ".wav",
-    ".woff2"
+    ".woff2",
+    ".xml"
   ],
   "directory": "/build",
   "retainUncompressedFiles": false
