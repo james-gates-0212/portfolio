@@ -21,6 +21,7 @@ const Footer = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={label}
                 >
                   <LightIcon />
                 </a>

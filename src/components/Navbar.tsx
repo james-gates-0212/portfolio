@@ -43,7 +43,7 @@ const NavBar = () => {
             {MainRoutes.map(({ className, href, icon: Icon, label, route, target }, idx) => (
               <Nav.Item key={`nav-item-${idx}`} className={route === pathname ? 'active' : className && 'fork-btn'}>
                 {className ? (
-                  <Button className={className} href={href} target={target}>
+                  <Button className={className} href={href} target={target} aria-label={label}>
                     <Icon />
                   </Button>
                 ) : (

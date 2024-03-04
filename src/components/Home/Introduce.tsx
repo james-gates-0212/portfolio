@@ -52,6 +52,7 @@ const Introduce = () => (
                   href={href}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={label}
                 >
                   <DarkIcon />
                 </a>
