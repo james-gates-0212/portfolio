@@ -78,6 +78,7 @@
     "@icongo/vl": "^1.2.0",
     "@testing-library/dom": "^7.21.4",
     "@types/prop-types": "^15.7.11",
+    "compress-create-react-app": "^1.4.5",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prop-types": "^15.8.1",

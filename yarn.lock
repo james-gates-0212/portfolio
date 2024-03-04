@@ -3374,6 +3374,11 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+app-root-path@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-3.1.0.tgz#5971a2fc12ba170369a7a1ef018c71e6e47c2e86"
+  integrity sha512-biN3PwB2gUtjaYy/isrU3aNWI5w+fAfvHkSvCKeQGxhmYpwKFUxudR3Yya+KqVRHBmEDYh+/lTozYCFbmzX4nA==
+
 arg@^5.0.0, arg@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.2.tgz#c81433cc427c92c4dcf4865142dbca6f15acd59c"
@@ -4131,6 +4136,14 @@ compare-func@^2.0.0:
   dependencies:
     array-ify "^1.0.0"
     dot-prop "^5.1.0"
+
+compress-create-react-app@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/compress-create-react-app/-/compress-create-react-app-1.4.5.tgz#35df235e0624e2f503a11266ef02f7bbebcfdb72"
+  integrity sha512-WGCobZGkTJ2E4xqjerSGhE86zup8ueEJXpuSL7nEZvQ+VSFmZkj8doV5Wp44TUFfgStnmHZQUkckLOgEzcEx9A==
+  dependencies:
+    app-root-path "^3.1.0"
+    yargs "^17.5.1"
 
 compressible@~2.0.16:
   version "2.0.18"
@@ -11111,7 +11124,7 @@ yargs@^16.2.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
-yargs@^17.0.0:
+yargs@^17.0.0, yargs@^17.5.1:
   version "17.7.2"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.7.2.tgz#991df39aca675a192b816e1e0363f9d75d2aa269"
   integrity sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==
