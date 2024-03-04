@@ -8,7 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": false,
@@ -20,7 +20,7 @@
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": false,
-    "target": "es6",
+    "target": "es5",
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["./src"]
