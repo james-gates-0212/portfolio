@@ -1,0 +1,20 @@
+{
+  "algorithms": ["gz"],
+  "filetypes": [
+    ".css",
+    ".gif",
+    ".html",
+    ".jpeg",
+    ".jpg",
+    ".js",
+    ".map",
+    ".mp3",
+    ".png",
+    ".svg",
+    ".tff",
+    ".wav",
+    ".woff2"
+  ],
+  "directory": "/build",
+  "retainUncompressedFiles": false
+}

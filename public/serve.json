@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "**/*.@(css|gif|html|jpeg|jpg|js|map|mp3|png|svg|tff|wav|woff2)",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    }
+  ]
+}
