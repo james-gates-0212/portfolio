@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://james-gates-portfolio.vercel.app/",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -20,6 +21,7 @@
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.1.2",
+    "react-helmet-async": "^2.0.4",
     "react-icons": "^5.0.1",
     "react-parallax-tilt": "^1.7.212",
     "react-router-dom": "^6.22.2",
@@ -59,6 +61,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-syntax-flow": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "@icongo/fc": "^1.2.0",
@@ -71,8 +76,11 @@
     "@icongo/sn": "^1.2.0",
     "@icongo/sti": "^1.2.0",
     "@icongo/vl": "^1.2.0",
+    "@testing-library/dom": "^7.21.4",
+    "@types/prop-types": "^15.7.11",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
+    "prop-types": "^15.8.1",
     "sitemap": "^7.1.1"
   }
 }
