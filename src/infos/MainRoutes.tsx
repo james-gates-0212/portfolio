@@ -21,6 +21,7 @@ export const MainRoutes = [
     element: <Experience />,
   },
   {
+    label: 'Github',
     className: 'fork-btn-inner',
     href: 'https://github.com/james-gates-0212',
     icon: () => (
