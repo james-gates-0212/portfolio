@@ -14,7 +14,8 @@
     "start": "npm run build && next start",
     "lint": "next lint",
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
