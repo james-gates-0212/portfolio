@@ -28,6 +28,7 @@
     "react-parallax-tilt": "^1.7.212",
     "react-tooltip": "^5.26.3",
     "react-vertical-timeline-component": "^3.6.0",
+    "sharp": "^0.33.2",
     "tsparticles": "^3.3.0",
     "typewriter-effect": "^2.21.0"
   },
