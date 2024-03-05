@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'As a seasoned Senior Full Stack Developer specializing in SEO and MERN Stack, I offer a proven track record of crafting resilient, intuitive web applications.',
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <section className="home-content container mx-auto px-2 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-12 mt-28">

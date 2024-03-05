@@ -4,6 +4,9 @@ import Experience from '@/components/clients/Experience';
 export const metadata: Metadata = {
   title: 'James Gates | Experience & Education',
   description: 'I can work full time, 8+ hours a day, 6 days a week. I hope to work with you in a long time.',
+  alternates: {
+    canonical: '/experience',
+  },
 };
 
 export default function Page() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "James Gates | I'm glad to meet you",
   description:
     'With a simple communication, a clean and optimized code convention, a high quality development for collaboration and maintenance, and a keeping schedules for a project.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function Page() {
