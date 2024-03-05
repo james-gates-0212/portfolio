@@ -1,12 +1,13 @@
 'use client';
 import 'react-vertical-timeline-component/style.min.css';
+import styles from './experience.module.css';
 import Experiences from '@/infos/Experiences';
 import { SNMapMarker, SNStarAlt } from '@icongo/sn';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 export default function Experience() {
   return (
-    <VerticalTimeline lineColor="rgba(255, 255, 255, 0.5)">
+    <VerticalTimeline lineColor="#fff">
       {Experiences.map(({ type, elementProps, title, company, address, site, details }, idx) => (
         <VerticalTimelineElement
           key={`vertical-timeline-element-${idx}`}
@@ -14,7 +15,7 @@ export default function Experience() {
           {...elementProps}
           visible={true}
         >
-          <h2 className="vertical-timeline-element-title">{title}</h2>
+          <h2 className={styles.verticalTimelineTitle}>{title}</h2>
           <h3 className="text-2xl text-impact">
             <a href={site} target="_blank" rel="noreferrer" aria-label={company}>
               {company}

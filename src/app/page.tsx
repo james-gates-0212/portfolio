@@ -1,8 +1,10 @@
-import TiltImage from '@/components/clients/TiltImage';
-import Type from '@/components/clients/Type';
-import LinkInfos from '@/infos/Links';
+import { classNames } from '@/components/Commons';
 import Image from 'next/image';
+import LinkInfos from '@/infos/Links';
+import style from './style.module.css';
+import TiltImage from '@/components/clients/TiltImage';
 import type { Metadata } from 'next';
+import Type from '@/components/clients/Type';
 
 export const metadata: Metadata = {
   title: 'James Gates | Senior Full Stack Developer & SEO Expert',
@@ -12,11 +14,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <section className="home-content container mx-auto px-2 sm:px-6 lg:px-8">
+    <section className="container mx-auto px-2 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-12 mt-28">
         <div className="md:col-span-7 text-4xl flex flex-col items-center justify-center">
           <div className="pb-4 text-center">
-            <span className="wave" role="img" aria-labelledby="wave">
+            <span className={style.wave} role="img" aria-labelledby="wave">
               👋🏻
             </span>
             <br />
@@ -87,9 +89,9 @@ export default function Page() {
         </p>
         <ul className="home-about-social-links text-center">
           {LinkInfos.map(({ href, icon: { dark: DarkIcon }, label }, idx) => (
-            <li className="social-icons" key={`intro-social-icon-${idx}`}>
+            <li className={style.socialIcons} key={`intro-social-icon-${idx}`}>
               <a
-                className="icon-color home-social-icons title-tooltip"
+                className={classNames(`title-tooltip`, style.homeSocialIcons)}
                 data-tooltip-content={label}
                 href={href}
                 target="_blank"
