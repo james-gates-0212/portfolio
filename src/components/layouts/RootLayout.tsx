@@ -2,6 +2,7 @@ import '@/app/globals.css';
 import NavBar from '@/components/clients/partials/NavBar';
 import Stars from '@/components/clients/backgrounds/Stars';
 import Footer from '@/components/Footer';
+import ReactTooltip from '@/components/clients/ReactTooltip';
 
 export default function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <ReactTooltip />
       </body>
     </html>
   );
