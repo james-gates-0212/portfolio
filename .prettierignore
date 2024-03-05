@@ -3,6 +3,7 @@
 .env
 .gitignore
 .prettierignore
+.next
 build
 dist
 node_modules

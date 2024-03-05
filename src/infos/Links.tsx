@@ -10,7 +10,7 @@ const LinkInfos = [
       dark: LGGoogleGmail,
       light: LGGoogleGmail,
     },
-    label: 'GMail',
+    label: 'Google Mail',
   },
   {
     href: 'mailto:pop.runner88@outlook.com',
@@ -18,7 +18,7 @@ const LinkInfos = [
       dark: IUMicrosoftOutlook,
       light: IUMicrosoftOutlook,
     },
-    label: 'Outlook',
+    label: 'Outlook Mail',
   },
   {
     href: 'https://join.skype.com/invite/cNobIuz9Vg5u',
