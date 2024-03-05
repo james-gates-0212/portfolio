@@ -1,4 +1,4 @@
-import SkillSets from '@/infos/Skillsets';
+import SkillSets from '@/infos/SkillSets';
 
 const Skills = () => (
   <div className="justify-center pb-12">

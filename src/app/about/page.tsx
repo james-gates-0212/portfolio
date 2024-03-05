@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/about',
   },
+  openGraph: {
+    url: '/about',
+    type: 'website',
+    images: '/avatar.jpg',
+  },
 };
 
 export default function Page() {
@@ -18,15 +23,15 @@ export default function Page() {
       <div className="grid md:grid-cols-12 mt-28">
         <div className="md:col-span-7 flex flex-col items-center">
           <h1 className="pb-4 text-center text-4xl ">
-            I'm glad to meet <strong className="text-impact">you</strong>
+            I&apos;m glad to meet <strong className="text-impact">you</strong>
           </h1>
 
           <p className="text-xl leading-8">
-            Hi, everyone, I'm <span className="text-impact">James Gates</span>.<br />
-            I'm <span className="text-impact">Senior Full Stack Developer</span> and{' '}
+            Hi, everyone, I&apos;m <span className="text-impact">James Gates</span>.<br />
+            I&apos;m <span className="text-impact">Senior Full Stack Developer</span> and{' '}
             <span className="text-impact">SEO Expert</span>.
             <br />
-            <br />I have 5+ years' experience for web development. During last years, I had earned many skills to
+            <br />I have 5+ years&apos; experience for web development. During last years, I had earned many skills to
             develop and manage a website and it now helps for a new project to develop in a high quality, rapidly.
             <br />
             <br />I like to work with a simple communication, a clean and optimized code convention, a high quality

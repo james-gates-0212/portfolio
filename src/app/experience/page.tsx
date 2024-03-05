@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/experience',
   },
+  openGraph: {
+    url: '/experience',
+    type: 'website',
+    images: '/avatar.jpg',
+  },
 };
 
 export default function Page() {

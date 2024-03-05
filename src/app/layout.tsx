@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
+    url: '/',
+    type: 'website',
     images: '/avatar.jpg',
   },
   twitter: {
@@ -29,5 +31,5 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <RootLayout children={children} />;
+  return <RootLayout>{children}</RootLayout>;
 }
