@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'vSy6aBobFApUM2bc6BgZd2XYJQ8P3sFadIdTcEtClwY',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/logo256.png',
+    apple: '/logo512.png',
+  },
+  manifest: '/manifest.json',
 };
 
 export default function Layout({
