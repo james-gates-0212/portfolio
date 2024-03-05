@@ -1,8 +1,8 @@
-import SkillSets from '@/infos/SkillSets';
+import SkillSetInfos from '@/infos/SkillSetInfos';
 
 const Skills = () => (
   <div className="justify-center pb-12">
-    {SkillSets.map(({ section, skills }, sIdx) => (
+    {SkillSetInfos.map(({ section, skills }, sIdx) => (
       <div key={`tech-section-${sIdx}`}>
         <p className="text-2xl mt-10 mb-6 text-center">{section}</p>
         <ul className="tech-icons">

@@ -36,7 +36,7 @@ import {
   VLYelp,
 } from '@icongo/vl';
 
-const SkillSets = [
+const SkillSetInfos = [
   {
     section: 'Languages',
     skills: [
@@ -219,4 +219,4 @@ const SkillSets = [
   },
 ];
 
-export default SkillSets;
+export default SkillSetInfos;
