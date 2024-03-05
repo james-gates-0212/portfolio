@@ -19,6 +19,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@next/third-parties": "^14.1.2",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@types/react-vertical-timeline-component": "^3.3.6",
@@ -28,7 +29,6 @@
     "react-parallax-tilt": "^1.7.212",
     "react-tooltip": "^5.26.3",
     "react-vertical-timeline-component": "^3.6.0",
-    "sharp": "^0.33.2",
     "tsparticles": "^3.3.0",
     "typewriter-effect": "^2.21.0"
   },

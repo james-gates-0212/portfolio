@@ -1,8 +1,9 @@
 import '@/app/globals.css';
-import NavBar from '@/components/clients/partials/NavBar';
-import Stars from '@/components/clients/backgrounds/Stars';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Footer from '@/components/Footer';
+import NavBar from '@/components/clients/partials/NavBar';
 import ReactTooltip from '@/components/clients/ReactTooltip';
+import Stars from '@/components/clients/backgrounds/Stars';
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
         <Footer />
         <ReactTooltip />
       </body>
+      <GoogleTagManager gtmId="G-1R1XC6TD2Z" />
     </html>
   );
 }
