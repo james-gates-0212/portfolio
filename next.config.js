@@ -8,6 +8,7 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 
 const nextConfig = withBundleAnalyzer({
   output: 'export',
+  images: { unoptimized: process.env.NODE_ENV === 'development' },
   basePath: process.env.BASE_PATH || '',
   generateBuildId: async () => {
     // This could be anything, using the latest git hash
