@@ -1,21 +1,21 @@
-# Portfolio based on Next.js
+# ❤️Portfolio based on Next.js & tailwindcss
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Environment
+## 📝Environment
 
 - node 18.x or later
 - yarn 1.x or later
 - npm 8.x or later
 
-## Install npm packages
+## 🚧Install npm packages
 
 ```bash
 npm i -g yarn
 yarn
 ```
 
-## Getting Started
+## 🌈Getting Started
 
 First, run the development server:
 
@@ -29,13 +29,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Lint
+## ✅Lint
 
 ```bash
 yarn lint
 ```
 
-## Prettier
+## ❤️Prettier
 
 ```bash
 prettier --write ./
@@ -46,7 +46,7 @@ prettier --write ./
 npm i -g prettier
 ```
 
-## Build or Start project as production
+## 🚀Build or Start project as production
 
 ```bash
 yarn build
@@ -58,7 +58,7 @@ or
 yarn start
 ```
 
-## Learn More
+## 🏆Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -67,13 +67,13 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🚀Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Git commit
+## 🐞Git commit
 
 Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commits.
 
@@ -85,18 +85,41 @@ Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 [optional footer(s)]
 ```
 
-### Types
+### ♻️Types
 
-```
+```bash
+♻️ # refactor
+⚡️ # filter
+✅ # add, update tests
+✏️ # edit
+✨ # new
+❤️ # feature
+⬆️ # up
+⬇️ # down
+⭐️ # new feature
+🌈 # style
+🎁 # adopt
+🎉 # congrats
+🏆 # build
+🐞 # bug fix
+👌 # okay
+📓 # report
+📝 # documentation update
+📦 # package
+🔀 # shuffle
+🔖 # tag
+🚀 # deployment
+🚧 # work in progress
+🚨 # emergency
+🛠️ # update
+add
+adopt
 build
 chore
-ci
 docs
 feat
 fix
-perf
 refactor
-revert
+remove
 style
-test
 ```
