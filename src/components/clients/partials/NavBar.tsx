@@ -14,7 +14,7 @@ export default function NavBar() {
   const current = usePathname();
 
   return (
-    <Disclosure as="nav" className="bg-white/10 backdrop-blur-md sticky top-0 shadow-lg z-50">
+    <Disclosure as="nav" className="bg-white/10 backdrop-blur-md fixed top-0 left-0 right-0 shadow-lg z-50">
       {({ open }) => (
         <>
           <div className="mx-auto container px-2 sm:px-6 lg:px-8">
