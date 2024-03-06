@@ -2,9 +2,7 @@ import { classNames } from '@/components/Commons';
 import Image from 'next/image';
 import LinkInfos from '@/infos/Links';
 import style from './style.module.css';
-import TiltImage from '@/components/clients/TiltImage';
 import type { Metadata } from 'next';
-import Type from '@/components/clients/Type';
 import Link from 'next/link';
 import homeImage from '@/app/assets/home.svg';
 import avatarImage from '@/app/assets/avatar.svg';
@@ -35,7 +33,17 @@ export default function Page() {
           </h1>
 
           <div className="py-14">
-            <Type />
+            <ul className="text-2xl leading-10">
+              <li>
+                <strong className="text-impact">Senior</strong> Full Stack Developer
+              </li>
+              <li>
+                <strong className="text-impact">SEO</strong> Expert
+              </li>
+              <li>
+                Continuously <strong className="text-impact">Learning</strong>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -47,7 +55,7 @@ export default function Page() {
             width={505}
             height={529}
             title="Home"
-            loading="lazy"
+            priority
           />
         </div>
       </div>
@@ -72,17 +80,7 @@ export default function Page() {
           </p>
         </div>
         <div className="md:col-span-4 flex items-center justify-center px-10 pt-10">
-          <TiltImage>
-            <Image
-              src={avatarImage}
-              className="w-auto"
-              alt="Avatar"
-              width="645"
-              height="500"
-              title="Avatar"
-              loading="lazy"
-            />
-          </TiltImage>
+          <Image src={avatarImage} className="w-auto" alt="Avatar" width="645" height="500" title="Avatar" priority />
         </div>
       </div>
       <div className="py-14 flex flex-col gap-5 justify-center">
