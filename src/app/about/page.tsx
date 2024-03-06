@@ -49,7 +49,6 @@ export default function Page() {
             width={600}
             height={529}
             title="About"
-            loading="lazy"
             priority
           />
         </div>
