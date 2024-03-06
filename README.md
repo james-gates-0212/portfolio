@@ -77,41 +77,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commits.
 
+e.g.
+
 ```commit
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
+<type>[scope]: <subject>
+[body]
+[footer]
 ```
 
 ### ♻️Types
 
+`type` should be one of belows.
+
 ```bash
-♻️ # refactor
-⚡️ # filter
-✅ # add, update tests
-✏️ # edit
-✨ # new
-❤️ # feature
-⬆️ # up
-⬇️ # down
-⭐️ # new feature
-🌈 # style
-🎁 # adopt
-🎉 # congrats
-🏆 # build
-🐞 # bug fix
-👌 # okay
-📓 # report
-📝 # documentation update
-📦 # package
-🔀 # shuffle
-🔖 # tag
-🚀 # deployment
-🚧 # work in progress
-🚨 # emergency
-🛠️ # update
 add
 adopt
 build
@@ -123,3 +101,32 @@ refactor
 remove
 style
 ```
+
+### 📓Subject
+
+`subject` should include one of emojis as belows.
+
+♻️
+⚡️
+✅
+✏️
+✨
+❤️
+⬆️
+⬇️
+⭐️
+🌈
+🎁
+🎉
+🏆
+🐞
+👌
+📓
+📝
+📦
+🔀
+🔖
+🚀
+🚧
+🚨
+🛠️
