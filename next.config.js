@@ -8,6 +8,7 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 
 const nextConfig = withBundleAnalyzer({
   output: 'export',
+  basePath: process.env.BASE_PATH || '',
   generateBuildId: async () => {
     // This could be anything, using the latest git hash
     const commitHash = ChildProcess.execSync('git log --pretty=format:"%h" -n1').toString().trim();
