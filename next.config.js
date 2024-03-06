@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-import ChildProcess from 'child_process';
-import NextBundleAnalyzer from '@next/bundle-analyzer';
+const ChildProcess = require('child_process');
+const NextBundleAnalyzer = require('@next/bundle-analyzer');
 
 const withBundleAnalyzer = NextBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -15,4 +15,4 @@ const nextConfig = withBundleAnalyzer({
   },
 });
 
-export default nextConfig;
+module.exports = nextConfig;

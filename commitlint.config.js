@@ -27,7 +27,7 @@ const emojis = [
 
 const includeEmojis = new RegExp(`[${emojis.join('')}]`, 'g');
 
-export default {
+const config = {
   extends: ['@commitlint/config-conventional'],
   plugins: [
     {
@@ -56,3 +56,5 @@ export default {
     ],
   },
 };
+
+module.exports = config;
