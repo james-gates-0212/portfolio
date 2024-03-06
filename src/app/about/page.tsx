@@ -2,6 +2,7 @@ import { SNLightBulb } from '@icongo/sn';
 import Image from 'next/image';
 import Skills from '@/components/Skills';
 import type { Metadata } from 'next';
+import aboutImage from '@/app/assets/about.svg';
 
 export const metadata: Metadata = {
   title: "James Gates | I'm glad to meet you",
@@ -42,7 +43,7 @@ export default function Page() {
 
         <div className="md:col-span-5 flex items-center justify-center">
           <Image
-            src="/assets/about.svg"
+            src={aboutImage}
             alt="About"
             className="w-auto max-h-[450px] mt-16"
             width={600}

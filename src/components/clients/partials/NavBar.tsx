@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import LinkInfos from '@/infos/Links';
 import NavItems from '@/infos/NavItems';
+import Link from 'next/link';
+import logoImage from '@/app/assets/logo256.png';
 
 export default function NavBar() {
   const current = usePathname();
@@ -30,12 +32,12 @@ export default function NavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image className="h-8 w-8" src="/logo256.png" alt="Logo" width={32} height={32} />
+                  <Image className="h-8 w-8" src={logoImage} alt="Logo" width={32} height={32} />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {NavItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -47,13 +49,12 @@ export default function NavBar() {
                         aria-current={current == item.href ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-indigo-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -75,7 +76,7 @@ export default function NavBar() {
                       {LinkInfos.map(({ href, icon: { dark: DarkIcon }, label }, idx) => (
                         <Menu.Item key={`menu-item-${idx}`}>
                           {({ active }) => (
-                            <a
+                            <Link
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-900',
@@ -87,7 +88,7 @@ export default function NavBar() {
                               aria-label={label}
                             >
                               <DarkIcon /> {label}
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                       ))}
