@@ -4,6 +4,7 @@ import styles from './experience.module.css';
 import Experiences from '@/infos/Experiences';
 import { SNMapMarker, SNStarAlt } from '@icongo/sn';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import Link from 'next/link';
 
 export default function Experience() {
   return (
@@ -17,9 +18,9 @@ export default function Experience() {
         >
           <h2 className={styles.verticalTimelineTitle}>{title}</h2>
           <h3 className="text-2xl text-impact">
-            <a href={site} target="_blank" rel="noreferrer" aria-label={company}>
+            <Link href={site} target="_blank" rel="noreferrer" aria-label={company}>
               {company}
-            </a>
+            </Link>
           </h3>
           <address className="flex flex-row gap-1 items-center">
             <SNMapMarker /> <span>{address}</span>

@@ -5,6 +5,9 @@ import style from './style.module.css';
 import TiltImage from '@/components/clients/TiltImage';
 import type { Metadata } from 'next';
 import Type from '@/components/clients/Type';
+import Link from 'next/link';
+import homeImage from '@/app/assets/home.svg';
+import avatarImage from '@/app/assets/avatar.svg';
 
 export const metadata: Metadata = {
   title: 'James Gates | Senior Full Stack Developer & SEO Expert',
@@ -38,7 +41,7 @@ export default function Page() {
 
         <div className="md:col-span-5 flex items-center justify-center">
           <Image
-            src="/assets/home-main.svg"
+            src={homeImage}
             alt="Home"
             className="w-auto max-h-[450px]"
             width={505}
@@ -71,7 +74,7 @@ export default function Page() {
         <div className="md:col-span-4 flex items-center justify-center px-10 pt-10">
           <TiltImage>
             <Image
-              src="/assets/avatar.svg"
+              src={avatarImage}
               className="w-auto"
               alt="Avatar"
               width="645"
@@ -90,7 +93,7 @@ export default function Page() {
         <ul className="home-about-social-links text-center">
           {LinkInfos.map(({ href, icon: { dark: DarkIcon }, label }, idx) => (
             <li className={style.socialIcons} key={`intro-social-icon-${idx}`}>
-              <a
+              <Link
                 className={classNames(`title-tooltip`, style.homeSocialIcons)}
                 data-tooltip-content={label}
                 href={href}
@@ -99,7 +102,7 @@ export default function Page() {
                 aria-label={label}
               >
                 <DarkIcon />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

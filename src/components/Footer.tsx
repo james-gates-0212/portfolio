@@ -1,4 +1,5 @@
 import LinkInfos from '@/infos/Links';
+import Link from 'next/link';
 
 const Footer = () => {
   let date = new Date();
@@ -13,7 +14,7 @@ const Footer = () => {
           <ul className="flex flex-row flex-wrap gap-6 items-center justify-center">
             {LinkInfos.map(({ href, icon: { light: LightIcon }, label }, idx) => (
               <li className="flex flex-col items-center justify-center" key={`foot-social-icon-${idx}`}>
-                <a
+                <Link
                   className="title-tooltip "
                   data-tooltip-content={label}
                   href={href}
@@ -22,7 +23,7 @@ const Footer = () => {
                   aria-label={label}
                 >
                   <LightIcon />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
