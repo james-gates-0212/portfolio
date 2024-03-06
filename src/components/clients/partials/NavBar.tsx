@@ -4,10 +4,11 @@ import { classNames } from '@/components/Commons';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
-import LinkInfos from '@/infos/Links';
-import NavItems from '@/infos/NavItems';
+import Avatar from '@/components/navbar/Avatar';
 import Link from 'next/link';
+import LinkInfos from '@/infos/Links';
+import Logo from '@/components/navbar/Logo';
+import NavItems from '@/infos/NavItems';
 
 export default function NavBar() {
   const current = usePathname();
@@ -31,7 +32,7 @@ export default function NavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img className="h-8 w-8" src="/logo256.png" alt="Logo" width={32} height={32} />
+                  <Logo />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -59,7 +60,7 @@ export default function NavBar() {
                     <Menu.Button className="relative flex rounded-full bg-indigo-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <img className="h-8 w-8 rounded-full" src="/avatar.jpg" alt="Avatar" width={32} height={32} />
+                      <Avatar />
                     </Menu.Button>
                   </div>
                   <Transition
