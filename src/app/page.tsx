@@ -48,6 +48,7 @@ export default function Page() {
             height={529}
             title="Home"
             loading="lazy"
+            priority
           />
         </div>
       </div>
@@ -81,6 +82,7 @@ export default function Page() {
               height="500"
               title="Avatar"
               loading="lazy"
+              priority
             />
           </TiltImage>
         </div>
