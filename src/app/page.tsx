@@ -56,7 +56,7 @@ export default function Page() {
               width={505}
               height={529}
               title="Home"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
@@ -83,7 +83,15 @@ export default function Page() {
             </p>
           </div>
           <div className="md:col-span-4 flex items-center justify-center px-10 pt-10">
-            <Image src={avatarImage} className="w-auto" alt="Avatar" width="645" height="500" title="Avatar" priority />
+            <Image
+              src={avatarImage}
+              className="w-auto"
+              alt="Avatar"
+              width="645"
+              height="500"
+              title="Avatar"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
