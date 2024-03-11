@@ -23,8 +23,9 @@ export default function Page() {
     <section className="about container mx-auto px-2 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-12 mt-28">
         <div className="md:col-span-7 flex flex-col items-center">
-          <h1 className="pb-4 text-center text-4xl ">
-            I&apos;m glad to meet <strong className="text-impact">you</strong>
+          <h1 className="pb-20 text-center text-4xl">
+            I&apos;m <strong className="text-impact">James Gates</strong>, really glad to meet{' '}
+            <strong className="text-impact">you</strong>
           </h1>
 
           <p className="text-xl leading-8">
@@ -60,6 +61,17 @@ export default function Page() {
       </div>
 
       <Skills />
+
+      <div className="text-xl leading-8 lg:w-1/2 px-10 mt-28 mx-auto">
+        <p>
+          For many aspects, such as Requirement Analysis, Architect Design, Database Modeling, Front-end/Back-end Coding
+          and Maintenance, I support reliable and qualified service.
+        </p>
+        <ul className="list-disc list-inside ml-5">
+          <li>Fast Progress, Best Quality and Constant Report</li>
+          <li>Cooperative Idea Support and so on</li>
+        </ul>
+      </div>
     </section>
   );
 }

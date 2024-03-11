@@ -64,9 +64,9 @@ export default function Page() {
       <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[712px]">
         <div className="grid md:grid-cols-12">
           <div className="md:col-span-8 px-10">
-            <div className="text-4xl uppercase text-center mb-16">
+            <h2 className="text-4xl uppercase text-center mb-16">
               Let me <span className="text-impact">Introduce</span> myself
-            </div>
+            </h2>
             <p className="text-xl leading-8">
               As an accomplished Senior Full Stack Developer specializing in SEO and MERN Stack development, I offer a
               proven track record of crafting resilient and intuitive web applications. Proficient in front-end and
@@ -95,9 +95,37 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto px-2 sm:px-6 lg:px-8 min-h-[256px]">
+      <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[256px]">
+        <div className="grid md:grid-cols-2">
+          <div className="px-10">
+            <h3 className="text-3xl capitalize text-center pb-5">SEO Optimization Project for Website Enhancement</h3>
+            <p className="text-xl leading-8">
+              Successfully improved SEO performance by identifying and resolving critical issues through a comprehensive
+              technical audit, leading to enhanced website functionality and user experience.
+            </p>
+            <p className="text-xl leading-8">
+              Optimized keyword usage and search engine visibility by developing a robust semantic core, contributing to
+              increased organic traffic and improved search rankings.
+            </p>
+          </div>
+          <div className="px-10">
+            <h3 className="text-3xl capitalize text-center pb-5">
+              Web Application Development and Optimization Project
+            </h3>
+            <p className="text-xl leading-8">
+              Enhanced development efficiency by 20% through React implementation and reduced communication latency by
+              30% with DynamoDB configuration.
+            </p>
+            <p className="text-xl leading-8">
+              Improved team efficiency by 20% through process standardization, achieved a 15% increase in organic
+              traffic, and enhanced site performance by 25% through technical SEO optimizations.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[256px]">
         <div className="py-14 flex flex-col gap-5 justify-center">
-          <div className="text-4xl uppercase text-center">FIND ME ON</div>
+          <h2 className="text-4xl uppercase text-center">FIND ME ON</h2>
           <p className="text-center">
             Feel free to <span className="text-impact">connect</span> with me
           </p>
