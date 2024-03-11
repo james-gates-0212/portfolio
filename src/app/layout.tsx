@@ -1,6 +1,6 @@
 import RootLayout from '@/components/layouts/RootLayout';
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://james-gates-portfolio.vercel.app'),
@@ -24,6 +24,22 @@ export const metadata: Metadata = {
     apple: '/logo512.png',
   },
   manifest: '/manifest.json',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: 'black',
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true,
 };
 
 export default function Layout({
