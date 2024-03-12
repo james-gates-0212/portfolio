@@ -8,8 +8,19 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo256.png",
-      "type": "image/png",
+      "src": "logo192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo192.webp",
+      "type": "image/webp",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo256.webp",
+      "type": "image/webp",
       "sizes": "256x256"
     },
     {

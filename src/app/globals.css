@@ -33,7 +33,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: rgb(var(--background-rgb));
-  background-image: url(./assets/background.jpg);
+  background-image: url(./assets/background.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
