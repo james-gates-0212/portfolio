@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/about',
     type: 'website',
-    images: '/avatar.jpg',
+    images: '/avatar.webp',
   },
 };
 

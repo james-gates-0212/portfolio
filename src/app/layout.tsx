@@ -10,18 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/',
     type: 'website',
-    images: '/avatar.jpg',
+    images: '/avatar.webp',
   },
   twitter: {
-    images: '/avatar.jpg',
+    images: '/avatar.webp',
   },
   verification: {
     google: 'vSy6aBobFApUM2bc6BgZd2XYJQ8P3sFadIdTcEtClwY',
   },
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/logo256.png',
-    apple: '/logo512.png',
+    shortcut: '/logo192.png',
+    apple: '/logo192.png',
   },
   manifest: '/manifest.json',
   robots: {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/experience',
     type: 'website',
-    images: '/avatar.jpg',
+    images: '/avatar.webp',
   },
 };
 
