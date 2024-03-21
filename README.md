@@ -1,3 +1,8 @@
+![Auto Assign](https://github.com/james-gates-0212/portfolio/actions/workflows/auto-assign.yml/badge.svg)
+![Deploy Next.js site to Pages](https://github.com/james-gates-0212/portfolio/actions/workflows/deploy-nextjs-site-to-pages.yml/badge.svg)
+![Next.js Bundle Analysis](https://github.com/james-gates-0212/portfolio/actions/workflows/nextjs-bundle-analysis.yml/badge.svg)
+![Proof HTML](https://github.com/james-gates-0212/portfolio/actions/workflows/proof-html.yml/badge.svg)
+
 # ❤️Portfolio based on Next.js & tailwindcss
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
