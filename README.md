@@ -92,11 +92,14 @@ e.g.
 ```bash
 add
 adopt
+apply
 build
 chore
+config
 docs
 feat
 fix
+init
 refactor
 remove
 style
