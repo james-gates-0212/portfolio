@@ -19,6 +19,9 @@ type TConfig = {
     ssl_cert?: string;
     logging: boolean;
   };
+  node: {
+    env: string;
+  };
 };
 
 const parseBoolean = (value) => ['true', '1'].includes((value || '').toLowerCase());
@@ -29,6 +32,9 @@ export function getConfig(): TConfig {
     common: {
       host: env.HOST_URL || 'http://localhost:3000',
       basePath: env.BASE_PATH || '',
+    },
+    node: {
+      env: env.NODE_ENV || 'production',
     },
   };
 
