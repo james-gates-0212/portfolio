@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "portfolio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "engines": {
     "node": ">=18",
@@ -24,12 +24,23 @@
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
+    "@types/bcrypt": "^5.0.2",
     "@types/react-vertical-timeline-component": "^3.3.6",
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "bcrypt": "^5.1.1",
+    "cli-highlight": "^2.1.11",
+    "lodash": "^4.17.21",
+    "mariadb": "^3.3.0",
+    "mysql2": "^3.9.2",
+    "next": "^14.1.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-tooltip": "^5.26.3",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "sequelize": "^6.37.1",
+    "sequelize-cli": "^6.6.2",
+    "sqlite": "^5.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
@@ -47,17 +58,17 @@
     "@icongo/vl": "^1.2.0",
     "@next/bundle-analyzer": "^14.1.2",
     "@types/node": "^20.11.24",
-    "@types/react": "^18",
+    "@types/react": "^18.2.60",
     "autoprefixer": "^10.0.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.1.0",
     "husky": "^9.0.11",
-    "postcss": "^8",
+    "postcss": "^8.4.23",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5.4.3"
   },
   "nextBundleAnalysis": {
     "budget": 358400,

@@ -1,7 +1,10 @@
+import { getConfig } from '@/config';
 import { MetadataRoute } from 'next';
 
+const config = getConfig();
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const host = 'https://james-gates-portfolio.vercel.app' + (process.env.BASE_PATH || '');
+  const host = config.common.host + config.common.basePath;
   return [
     {
       url: host,
