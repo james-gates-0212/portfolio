@@ -1,9 +1,11 @@
+import { getConfig } from '@/config';
 import RootLayout from '@/components/layouts/RootLayout';
-
 import type { Metadata, Viewport } from 'next';
 
+const config = getConfig();
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://james-gates-portfolio.vercel.app'),
+  metadataBase: new URL(config.common.host),
   alternates: {
     canonical: '/',
   },
