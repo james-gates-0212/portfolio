@@ -10,8 +10,9 @@ import { Sequelize } from 'sequelize';
 import { getConfig } from '@/config';
 
 // import models for tables of your database
+import userModel from '@/database/models/user';
 
-const dataModels: Array<Function> = [];
+const dataModels: Array<Function> = [userModel];
 
 const databaseModules = {
   postgres: pg,
