@@ -29,6 +29,8 @@
     "bcrypt": "^5.1.1",
     "cli-highlight": "^2.1.11",
     "dotenv": "^16.4.5",
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.7.5",
     "lodash": "^4.17.21",
     "mariadb": "^3.3.0",
     "mysql2": "^3.9.2",
