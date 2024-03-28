@@ -2,52 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 225, 225, 225;
-  --background-rgb: 0, 0, 0;
-  --foreground-impact: #a2facf;
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 5px;
-  background: rgba(108, 101, 249, 0.1) !important;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 5px;
-  background-color: rgba(109, 101, 249, 0.8) !important;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(109, 101, 249, 1) !important;
-}
-
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background-color: rgb(var(--background-rgb));
-  background-image: url(./assets/background.webp);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: rgb(var(--foreground-rgb));
-  font-family: var(--font-raleway);
-  min-height: 100vh;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.text-impact {
-  color: var(--foreground-impact);
 }
