@@ -23,7 +23,7 @@ const databaseModules = {
 
 const highlight = require('cli-highlight').highlight;
 
-async function models() {
+function models() {
   const config = getConfig();
 
   const database = {} as any;
