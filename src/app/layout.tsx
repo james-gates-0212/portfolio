@@ -1,5 +1,11 @@
+import '@/app/globals.css';
 import { getConfig } from '@/config';
-import RootLayout from '@/components/layouts/RootLayout';
+import { GoogleTagManager } from '@next/third-parties/google';
+import { Suspense } from 'react';
+import { ThemeModeScript } from 'flowbite-react';
+import Image from 'next/image';
+import PreImage from '@/app/assets/pre.svg';
+import ReactTooltip from '@/components/clients/ReactTooltip';
 import type { Metadata, Viewport } from 'next';
 
 const config = getConfig();
@@ -44,10 +50,29 @@ export const viewport: Viewport = {
   userScalable: true,
 };
 
-export default function Layout({
+const Loading = () => (
+  <div className="fixed top-0 right-0 bottom-0 left-0 flex flex-col items-center justify-center">
+    <Image src={PreImage} alt="Loading..." title="Loading..." priority />
+  </div>
+);
+
+export default function BaseLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <RootLayout>{children}</RootLayout>;
+  return (
+    <html lang="en">
+      <head>
+        <ThemeModeScript />
+      </head>
+      <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
+        <Suspense fallback={<Loading />}>
+          {children}
+          <ReactTooltip />
+        </Suspense>
+      </body>
+      {Boolean(config.google.tag_manager_id) && <GoogleTagManager gtmId={config.google.tag_manager_id} />}
+    </html>
+  );
 }
