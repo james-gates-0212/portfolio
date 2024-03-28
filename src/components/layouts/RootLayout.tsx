@@ -1,5 +1,3 @@
-'use client';
-
 import { Flowbite } from 'flowbite-react';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/clients/partials/NavBar';
