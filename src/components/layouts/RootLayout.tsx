@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import { getConfig } from '@/config';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Raleway } from 'next/font/google';
 import { Suspense } from 'react';
@@ -8,6 +9,8 @@ import NavBar from '@/components/clients/partials/NavBar';
 import PreImage from '@/app/assets/pre.svg';
 import ReactTooltip from '@/components/clients/ReactTooltip';
 import Stars from '@/components/clients/backgrounds/Stars';
+
+const config = getConfig();
 
 const Loading = () => (
   <div className="fixed top-0 right-0 bottom-0 left-0 flex flex-col items-center justify-center">
@@ -38,7 +41,7 @@ export default function RootLayout({
           <ReactTooltip />
         </Suspense>
       </body>
-      <GoogleTagManager gtmId="G-1R1XC6TD2Z" />
+      {Boolean(config.google.tag_manager_id) && <GoogleTagManager gtmId={config.google.tag_manager_id} />}
     </html>
   );
 }

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: '/avatar.webp',
   },
   verification: {
-    google: 'vSy6aBobFApUM2bc6BgZd2XYJQ8P3sFadIdTcEtClwY',
+    google: config.google.verification,
   },
   icons: {
     icon: '/favicon.ico',
