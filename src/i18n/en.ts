@@ -53,7 +53,11 @@ const en = {
     },
   },
 
-  entities: {},
+  entities: {
+    user: {
+      menu: 'User',
+    },
+  },
 };
 
 export default en;
