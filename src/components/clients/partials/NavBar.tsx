@@ -1,5 +1,3 @@
-'use client';
-
 import { DarkThemeToggle, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from 'flowbite-react';
 import { i18n } from '@/i18n';
 import { usePathname } from 'next/navigation';

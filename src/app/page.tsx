@@ -99,7 +99,9 @@ export default function Page() {
       <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[256px]">
         <div className="grid md:grid-cols-2">
           <div className="px-10">
-            <h3 className="text-3xl capitalize text-center pb-5">SEO Optimization Project for Website Enhancement</h3>
+            <h3 className="text-3xl capitalize text-center text-black dark:text-white pb-5">
+              SEO Optimization Project for Website Enhancement
+            </h3>
             <p className="text-xl leading-8">
               Successfully improved SEO performance by identifying and resolving critical issues through a comprehensive
               technical audit, leading to enhanced website functionality and user experience.
@@ -110,7 +112,7 @@ export default function Page() {
             </p>
           </div>
           <div className="px-10">
-            <h3 className="text-3xl capitalize text-center pb-5">
+            <h3 className="text-3xl capitalize text-center text-black dark:text-white pb-5">
               Web Application Development and Optimization Project
             </h3>
             <p className="text-xl leading-8">

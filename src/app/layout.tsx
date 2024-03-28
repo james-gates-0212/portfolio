@@ -1,12 +1,13 @@
 import '@/app/globals.css';
 import { getConfig } from '@/config';
 import { GoogleTagManager } from '@next/third-parties/google';
+import { Raleway } from 'next/font/google';
 import { Suspense } from 'react';
-import { ThemeModeScript } from 'flowbite-react';
 import Image from 'next/image';
 import PreImage from '@/app/assets/pre.svg';
 import ReactTooltip from '@/components/clients/ReactTooltip';
 import type { Metadata, Viewport } from 'next';
+import { classNames } from '@/components/Commons';
 
 const config = getConfig();
 
@@ -43,6 +44,11 @@ export const metadata: Metadata = {
   },
 };
 
+const raleway = Raleway({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const viewport: Viewport = {
   themeColor: 'black',
   width: 'device-width',
@@ -62,10 +68,7 @@ export default function BaseLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <ThemeModeScript />
-      </head>
+    <html lang="en" className={classNames(raleway.className, 'dark')}>
       <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
         <Suspense fallback={<Loading />}>
           {children}
