@@ -1,8 +1,7 @@
 'use client';
 
+import { Flowbite } from 'flowbite-react';
 import Footer from '@/components/Footer';
-import ReactTooltip from '@/components/clients/ReactTooltip';
-import Stars from '@/components/clients/backgrounds/Stars';
 import NavBar from '@/components/clients/partials/NavBar';
 
 export default function RootLayout({
@@ -11,10 +10,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <Flowbite>
       <NavBar />
       {children}
       <Footer />
-    </>
+    </Flowbite>
   );
 }
