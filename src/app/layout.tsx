@@ -18,17 +18,17 @@ const DynamicThemeModeScript = dynamic(() => import('flowbite-react').then((mod)
 const config = getConfig();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(config.common.host),
+  metadataBase: new URL(config.common.basePath, config.common.host),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     url: '/',
     type: 'website',
-    images: '/avatar.webp',
+    images: `${config.common.basePath}/avatar.webp`,
   },
   twitter: {
-    images: '/avatar.webp',
+    images: `${config.common.basePath}/avatar.webp`,
   },
   verification: {
     google: config.google.verification,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     shortcut: '/logo192.png',
     apple: '/logo192.png',
   },
-  manifest: '/manifest.json',
+  manifest: `${config.common.basePath}/manifest.json`,
   robots: {
     index: true,
     follow: true,
@@ -76,7 +76,7 @@ export default function BaseLayout({
   return (
     <html lang="en" className={classNames(raleway.className, 'dark')}>
       <head>
-        <Script src="/flowbite-theme.js" />
+        <Script src={`${config.common.basePath}/flowbite-theme.js`} />
         <DynamicThemeModeScript />
       </head>
       <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
