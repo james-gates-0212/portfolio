@@ -1,12 +1,9 @@
-import { getConfig } from '@/config';
 import { SNLightBulb } from '@icongo/sn';
 import aboutImage from '@/app/assets/about.svg';
 import Image from 'next/image';
 import RootLayout from '@/components/layouts/RootLayout';
 import Skills from '@/components/Skills';
 import type { Metadata } from 'next';
-
-const config = getConfig();
 
 export const metadata: Metadata = {
   title: "James Gates | I'm glad to meet you",
@@ -18,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/about',
     type: 'website',
-    images: `${config.common.basePath}/avatar.webp`,
+    images: '/avatar.webp',
   },
 };
 
