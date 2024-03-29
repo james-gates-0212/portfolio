@@ -88,7 +88,7 @@ jobs:
           BASE_PATH: ${{ vars.BASE_PATH }}
           GOOGLE_VERIFICATION: ${{ vars.GOOGLE_VERIFICATION }}
           GOOGLE_TAG_MANAGER_ID: ${{ vars.GOOGLE_TAG_MANAGER_ID }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} cross-env BASE_PATH="/${{ vars.BASE_PATH }}" next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
       # run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
