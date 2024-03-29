@@ -10,6 +10,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 [![Next.js Bundle Analysis](https://github.com/james-gates-0212/portfolio/actions/workflows/nextjs-bundle-analysis.yml/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/nextjs-bundle-analysis.yml)
 [![Proof HTML](https://github.com/james-gates-0212/portfolio/actions/workflows/proof-html.yml/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/proof-html.yml)
 
+![GitHub Issues](https://img.shields.io/github/issues/james-gates-0212/portfolio)
+![GitHub Release](https://img.shields.io/github/v/release/james-gates-0212/portfolio)
+![GitHub Tag](https://img.shields.io/github/v/tag/james-gates-0212/portfolio)
+
 ## 📝Environment
 
 - node 18.x or later
