@@ -74,7 +74,21 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} cross-env BASE_PATH="/${{ github.event.repository.name }}" next build
+        env:
+          DATABASE_DIALECT: ${{ secrets.DATABASE_DIALECT }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+          DATABASE_DATABASE: ${{ secrets.DATABASE_DATABASE }}
+          DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_SSL: ${{ secrets.DATABASE_SSL }}
+          DATABASE_SSL_CERT: ${{ secrets.DATABASE_SSL_CERT }}
+          DATABASE_LOGGING: ${{ secrets.DATABASE_LOGGING }}
+          HOST_URL: ${{ secrets.HOST_URL }}
+          BASE_PATH: ${{ secrets.BASE_PATH }}
+          GOOGLE_VERIFICATION: ${{ secrets.GOOGLE_VERIFICATION }}
+          GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
       # run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
