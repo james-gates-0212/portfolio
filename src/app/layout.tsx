@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PreImage from '@/app/assets/pre.svg';
 import ReactTooltip from '@/components/clients/ReactTooltip';
+import Script from 'next/script';
 import type { Metadata, Viewport } from 'next';
 
 const DynamicThemeModeScript = dynamic(() => import('flowbite-react').then((mod) => mod.ThemeModeScript), {
@@ -75,7 +76,7 @@ export default function BaseLayout({
   return (
     <html lang="en" className={classNames(raleway.className, 'dark')}>
       <head>
-        <script type="text/javascript" src="/flowbite-theme.js"></script>
+        <Script src="/flowbite-theme.js" />
         <DynamicThemeModeScript />
       </head>
       <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
