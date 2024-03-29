@@ -22,5 +22,5 @@
     "editor.formatOnSave": true
   },
   "editor.tabSize": 2,
-  "cSpell.words": ["MERN", "portfolio", "tailwindcss"]
+  "cSpell.words": ["flowbite", "hoverable", "MERN", "portfolio", "tailwindcss"]
 }

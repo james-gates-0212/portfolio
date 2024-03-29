@@ -28,6 +28,9 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "bcrypt": "^5.1.1",
     "cli-highlight": "^2.1.11",
+    "dotenv": "^16.4.5",
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.7.5",
     "lodash": "^4.17.21",
     "mariadb": "^3.3.0",
     "mysql2": "^3.9.2",
@@ -68,7 +71,10 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.4.3"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   },
   "nextBundleAnalysis": {
     "budget": 358400,

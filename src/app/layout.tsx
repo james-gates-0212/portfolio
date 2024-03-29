@@ -1,5 +1,12 @@
+import '@/app/globals.css';
+import { classNames } from '@/components/Commons';
 import { getConfig } from '@/config';
-import RootLayout from '@/components/layouts/RootLayout';
+import { GoogleTagManager } from '@next/third-parties/google';
+import { Raleway } from 'next/font/google';
+import { Suspense } from 'react';
+import Image from 'next/image';
+import PreImage from '@/app/assets/pre.svg';
+import ReactTooltip from '@/components/clients/ReactTooltip';
 import type { Metadata, Viewport } from 'next';
 
 const config = getConfig();
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
     images: '/avatar.webp',
   },
   verification: {
-    google: 'vSy6aBobFApUM2bc6BgZd2XYJQ8P3sFadIdTcEtClwY',
+    google: config.google.verification,
   },
   icons: {
     icon: '/favicon.ico',
@@ -37,6 +44,11 @@ export const metadata: Metadata = {
   },
 };
 
+const raleway = Raleway({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const viewport: Viewport = {
   themeColor: 'black',
   width: 'device-width',
@@ -44,10 +56,26 @@ export const viewport: Viewport = {
   userScalable: true,
 };
 
-export default function Layout({
+const Loading = () => (
+  <div className="fixed top-0 right-0 bottom-0 left-0 flex flex-col items-center justify-center">
+    <Image src={PreImage} alt="Loading..." title="Loading..." priority />
+  </div>
+);
+
+export default function BaseLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <RootLayout>{children}</RootLayout>;
+  return (
+    <html lang="en" className={classNames(raleway.className, 'dark')}>
+      <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
+        <Suspense fallback={<Loading />}>
+          {children}
+          <ReactTooltip />
+        </Suspense>
+      </body>
+      {Boolean(config.google.tag_manager_id) && <GoogleTagManager gtmId={config.google.tag_manager_id} />}
+    </html>
+  );
 }

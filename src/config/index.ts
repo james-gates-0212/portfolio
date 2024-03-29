@@ -22,6 +22,10 @@ type TConfig = {
   node: {
     env: string;
   };
+  google: {
+    verification: string;
+    tag_manager_id: string;
+  };
 };
 
 const parseBoolean = (value) => ['true', '1'].includes((value || '').toLowerCase());
@@ -35,6 +39,10 @@ export function getConfig(): TConfig {
     },
     node: {
       env: env.NODE_ENV || 'production',
+    },
+    google: {
+      verification: env.GOOGLE_VERIFICATION || '',
+      tag_manager_id: env.GOOGLE_TAG_MANAGER_ID || '',
     },
   };
 

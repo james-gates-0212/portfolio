@@ -26,8 +26,8 @@ function format(message, args) {
 /**
  * Checks if the key exists on the language.
  */
-export const i18nExists = (languageCode, key) => {
-  const dictionary = languages[languageCode] || languages[defaultLanguage];
+export const i18nExists = (key) => {
+  const dictionary = languages[defaultLanguage];
   const message = _get(dictionary, key);
   return Boolean(message);
 };
@@ -35,8 +35,8 @@ export const i18nExists = (languageCode, key) => {
 /**
  * Returns the translation based on the key.
  */
-export const i18n = (languageCode, key, ...args) => {
-  const dictionary = languages[languageCode] || languages[defaultLanguage];
+export const i18n = (key, ...args) => {
+  const dictionary = languages[defaultLanguage];
   const message = _get(dictionary, key);
 
   if (!message) {
