@@ -9,7 +9,7 @@ export default function AdminLayout({
   return (
     <Flowbite>
       <NavBar />
-      {children}
+      <section className="container mx-auto">{children}</section>
     </Flowbite>
   );
 }

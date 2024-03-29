@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import { classNames } from '@/components/Commons';
 import { getConfig } from '@/config';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Raleway } from 'next/font/google';
@@ -7,7 +8,6 @@ import Image from 'next/image';
 import PreImage from '@/app/assets/pre.svg';
 import ReactTooltip from '@/components/clients/ReactTooltip';
 import type { Metadata, Viewport } from 'next';
-import { classNames } from '@/components/Commons';
 
 const config = getConfig();
 
