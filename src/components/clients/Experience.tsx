@@ -17,7 +17,7 @@ export default function Experience() {
           visible={true}
         >
           <h2 className={styles.verticalTimelineTitle}>{title}</h2>
-          <h3 className="text-2xl text-impact">
+          <h3 className="text-2xl text-black dark:text-white">
             <Link href={site} target="_blank" rel="noreferrer" aria-label={company}>
               {company}
             </Link>

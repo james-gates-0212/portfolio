@@ -53,7 +53,19 @@ const en = {
     },
   },
 
-  entities: {},
+  entities: {
+    user: {
+      title: 'User',
+      menu: 'User',
+      fields: {
+        id: 'ID',
+        fullName: 'Full Name',
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        email: 'Email',
+      },
+    },
+  },
 };
 
 export default en;

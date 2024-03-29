@@ -1,11 +1,12 @@
 import { classNames } from '@/components/Commons';
+import avatarImage from '@/app/assets/avatar.svg';
+import homeImage from '@/app/assets/home.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 import LinkInfos from '@/infos/Links';
+import RootLayout from '@/components/layouts/RootLayout';
 import style from './style.module.css';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import homeImage from '@/app/assets/home.svg';
-import avatarImage from '@/app/assets/avatar.svg';
 
 export const metadata: Metadata = {
   title: 'James Gates | Senior Full Stack Developer & SEO Expert',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <>
+    <RootLayout>
       <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[562px]">
         <div className="grid md:grid-cols-12">
           <div className="md:col-span-7 text-4xl flex flex-col items-center justify-center">
@@ -30,19 +31,19 @@ export default function Page() {
 
             <h1 className="py-2 text-center">
               My name is
-              <strong className="font-bold text-impact"> James Gates</strong>
+              <strong className="font-bold text-black dark:text-white"> James Gates</strong>
             </h1>
 
             <div className="py-14">
               <ul className="text-2xl leading-10">
                 <li>
-                  <strong className="text-impact">Senior</strong> Full Stack Developer
+                  <strong className="text-black dark:text-white">Senior</strong> Full Stack Developer
                 </li>
                 <li>
-                  <strong className="text-impact">SEO</strong> Expert
+                  <strong className="text-black dark:text-white">SEO</strong> Expert
                 </li>
                 <li>
-                  Continuously <strong className="text-impact">Learning</strong>
+                  Continuously <strong className="text-black dark:text-white">Learning</strong>
                 </li>
               </ul>
             </div>
@@ -65,7 +66,7 @@ export default function Page() {
         <div className="grid md:grid-cols-12">
           <div className="md:col-span-8 px-10">
             <h2 className="text-4xl uppercase text-center mb-16">
-              Let me <span className="text-impact">Introduce</span> myself
+              Let me <span className="text-black dark:text-white">Introduce</span> myself
             </h2>
             <p className="text-xl leading-8">
               As an accomplished Senior Full Stack Developer specializing in SEO and MERN Stack development, I offer a
@@ -98,7 +99,9 @@ export default function Page() {
       <section className="container mx-auto px-2 sm:px-6 lg:px-8 pt-28 min-h-[256px]">
         <div className="grid md:grid-cols-2">
           <div className="px-10">
-            <h3 className="text-3xl capitalize text-center pb-5">SEO Optimization Project for Website Enhancement</h3>
+            <h3 className="text-3xl capitalize text-center text-black dark:text-white pb-5">
+              SEO Optimization Project for Website Enhancement
+            </h3>
             <p className="text-xl leading-8">
               Successfully improved SEO performance by identifying and resolving critical issues through a comprehensive
               technical audit, leading to enhanced website functionality and user experience.
@@ -109,7 +112,7 @@ export default function Page() {
             </p>
           </div>
           <div className="px-10">
-            <h3 className="text-3xl capitalize text-center pb-5">
+            <h3 className="text-3xl capitalize text-center text-black dark:text-white pb-5">
               Web Application Development and Optimization Project
             </h3>
             <p className="text-xl leading-8">
@@ -127,7 +130,7 @@ export default function Page() {
         <div className="py-14 flex flex-col gap-5 justify-center">
           <h2 className="text-4xl uppercase text-center">FIND ME ON</h2>
           <p className="text-center">
-            Feel free to <span className="text-impact">connect</span> with me
+            Feel free to <span className="text-black dark:text-white">connect</span> with me
           </p>
           <ul className="home-about-social-links text-center">
             {LinkInfos.map(({ href, icon: { dark: DarkIcon }, label }, idx) => (
@@ -147,6 +150,6 @@ export default function Page() {
           </ul>
         </div>
       </section>
-    </>
+    </RootLayout>
   );
 }

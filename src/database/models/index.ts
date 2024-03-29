@@ -10,8 +10,9 @@ import { Sequelize } from 'sequelize';
 import { getConfig } from '@/config';
 
 // import models for tables of your database
+import userModel from '@/database/models/user';
 
-const dataModels: Array<Function> = [];
+const dataModels: Array<Function> = [userModel];
 
 const databaseModules = {
   postgres: pg,
@@ -22,7 +23,7 @@ const databaseModules = {
 
 const highlight = require('cli-highlight').highlight;
 
-async function models() {
+function models() {
   const config = getConfig();
 
   const database = {} as any;

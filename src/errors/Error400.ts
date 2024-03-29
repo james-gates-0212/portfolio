@@ -6,11 +6,11 @@ export default class Error400 extends Error {
   constructor(language?, messageCode?, ...args) {
     let message;
 
-    if (messageCode && i18nExists(language, messageCode)) {
-      message = i18n(language, messageCode, ...args);
+    if (messageCode && i18nExists(messageCode)) {
+      message = i18n(messageCode, ...args);
     }
 
-    message = message || i18n(language, 'errors.validation.message');
+    message = message || i18n('errors.validation.message');
 
     super(message);
     this.code = 400;
