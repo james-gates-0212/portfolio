@@ -6,11 +6,11 @@ export default class Error403 extends Error {
   constructor(language?, messageCode?) {
     let message;
 
-    if (messageCode && i18nExists(language, messageCode)) {
-      message = i18n(language, messageCode);
+    if (messageCode && i18nExists(messageCode)) {
+      message = i18n(messageCode);
     }
 
-    message = message || i18n(language, 'errors.forbidden.message');
+    message = message || i18n('errors.forbidden.message');
 
     super(message);
     this.code = 403;
