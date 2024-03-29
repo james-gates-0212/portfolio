@@ -4,10 +4,15 @@ import { getConfig } from '@/config';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Raleway } from 'next/font/google';
 import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PreImage from '@/app/assets/pre.svg';
 import ReactTooltip from '@/components/clients/ReactTooltip';
 import type { Metadata, Viewport } from 'next';
+
+const DynamicThemeModeScript = dynamic(() => import('flowbite-react').then((mod) => mod.ThemeModeScript), {
+  ssr: false,
+});
 
 const config = getConfig();
 
@@ -69,6 +74,10 @@ export default function BaseLayout({
 }>) {
   return (
     <html lang="en" className={classNames(raleway.className, 'dark')}>
+      <head>
+        <script type="text/javascript" src="/flowbite-theme.js"></script>
+        <DynamicThemeModeScript />
+      </head>
       <body className="bg-white text-gray-600 dark:bg-gray-900 dark:text-gray-400">
         <Suspense fallback={<Loading />}>
           {children}
