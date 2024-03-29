@@ -75,19 +75,19 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         env:
-          DATABASE_DIALECT: ${{ vars.DATABASE_DIALECT }}
-          DATABASE_HOST: ${{ vars.DATABASE_HOST }}
-          DATABASE_PORT: ${{ vars.DATABASE_PORT }}
-          DATABASE_DATABASE: ${{ vars.DATABASE_DATABASE }}
-          DATABASE_USERNAME: ${{ vars.DATABASE_USERNAME }}
-          DATABASE_PASSWORD: ${{ vars.DATABASE_PASSWORD }}
-          DATABASE_SSL: ${{ vars.DATABASE_SSL }}
-          DATABASE_SSL_CERT: ${{ vars.DATABASE_SSL_CERT }}
-          DATABASE_LOGGING: ${{ vars.DATABASE_LOGGING }}
-          HOST_URL: ${{ vars.HOST_URL }}
-          BASE_PATH: ${{ vars.BASE_PATH }}
-          GOOGLE_VERIFICATION: ${{ vars.GOOGLE_VERIFICATION }}
-          GOOGLE_TAG_MANAGER_ID: ${{ vars.GOOGLE_TAG_MANAGER_ID }}
+          DATABASE_DIALECT: ${{ secrets.DATABASE_DIALECT }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+          DATABASE_DATABASE: ${{ secrets.DATABASE_DATABASE }}
+          DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_SSL: ${{ secrets.DATABASE_SSL }}
+          DATABASE_SSL_CERT: ${{ secrets.DATABASE_SSL_CERT }}
+          DATABASE_LOGGING: ${{ secrets.DATABASE_LOGGING }}
+          HOST_URL: ${{ secrets.HOST_URL }}
+          BASE_PATH: ${{ secrets.BASE_PATH }}
+          GOOGLE_VERIFICATION: ${{ secrets.GOOGLE_VERIFICATION }}
+          GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
       # run: ${{ steps.detect-package-manager.outputs.runner }} next export
