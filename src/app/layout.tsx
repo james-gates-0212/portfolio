@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/',
     type: 'website',
-    images: `${config.common.basePath}/avatar.webp`,
+    images: '/avatar.webp',
   },
   twitter: {
-    images: `${config.common.basePath}/avatar.webp`,
+    images: '/avatar.webp',
   },
   verification: {
     google: config.google.verification,

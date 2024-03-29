@@ -1,9 +1,6 @@
-import { getConfig } from '@/config';
 import Experience from '@/components/clients/Experience';
 import RootLayout from '@/components/layouts/RootLayout';
 import type { Metadata } from 'next';
-
-const config = getConfig();
 
 export const metadata: Metadata = {
   title: 'James Gates | Experience & Education',
@@ -14,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/experience',
     type: 'website',
-    images: `${config.common.basePath}/avatar.webp`,
+    images: '/avatar.webp',
   },
 };
 
