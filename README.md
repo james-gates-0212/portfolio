@@ -1,8 +1,9 @@
-# ❤️Portfolio based on Next.js & tailwindcss
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## 🔖Repository Status
+![GitHub forks](https://img.shields.io/github/forks/james-gates-0212/portfolio?style=flat)
+![GitHub Discussions](https://img.shields.io/github/discussions/james-gates-0212/portfolio)
+![GitHub Issues](https://img.shields.io/github/issues/james-gates-0212/portfolio)
+![GitHub License](https://img.shields.io/github/license/james-gates-0212/portfolio)
+![GitHub Release](https://img.shields.io/github/v/release/james-gates-0212/portfolio)
+![GitHub Tag](https://img.shields.io/github/v/tag/james-gates-0212/portfolio)
 
 [![Auto Assign](https://github.com/james-gates-0212/portfolio/actions/workflows/auto-assign.yml/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/auto-assign.yml)
 [![CodeQL](https://github.com/james-gates-0212/portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/github-code-scanning/codeql)
@@ -10,9 +11,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 [![Next.js Bundle Analysis](https://github.com/james-gates-0212/portfolio/actions/workflows/nextjs-bundle-analysis.yml/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/nextjs-bundle-analysis.yml)
 [![Proof HTML](https://github.com/james-gates-0212/portfolio/actions/workflows/proof-html.yml/badge.svg)](https://github.com/james-gates-0212/portfolio/actions/workflows/proof-html.yml)
 
-![GitHub Issues](https://img.shields.io/github/issues/james-gates-0212/portfolio)
-![GitHub Release](https://img.shields.io/github/v/release/james-gates-0212/portfolio)
-![GitHub Tag](https://img.shields.io/github/v/tag/james-gates-0212/portfolio)
+# ❤️Portfolio based on Next.js & tailwindcss
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## 📝Environment
 
