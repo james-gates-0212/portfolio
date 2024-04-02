@@ -9,7 +9,7 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "npm run build && next start",
     "lint": "next lint",
