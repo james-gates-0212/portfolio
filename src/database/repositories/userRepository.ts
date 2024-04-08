@@ -23,6 +23,8 @@ export default class UserRepository extends BaseRepository {
       order: orderBy ? [orderBy.split('_')] : [['id', 'desc']],
     });
 
+    rows = await Promise.all(rows.map(async (row) => this._fillWithRelationsAndFiles(row, options)));
+
     return { rows, count };
   }
 
@@ -52,12 +54,35 @@ export default class UserRepository extends BaseRepository {
     return this.findById(record.id, options);
   }
 
+  static async update(id, data, options: IRepositoryOptions) {
+    const transaction = SequelizeRepository.getTransaction(options);
+
+    let record = await options.database.user.findOne({
+      where: {
+        id,
+      },
+      transaction,
+    });
+
+    if (!record) {
+      throw new Error404();
+    }
+
+    record = await record.update(data, {
+      transaction,
+    });
+
+    return this.findById(record.id, options);
+  }
+
   static async _fillWithRelationsAndFiles(record, options: IRepositoryOptions, metaOnly = true) {
     if (!record) {
       return record;
     }
 
     const output = record.get({ plain: true });
+
+    output.action = output.id;
 
     if (metaOnly) {
       return output;
