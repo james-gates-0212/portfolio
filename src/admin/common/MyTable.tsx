@@ -15,6 +15,7 @@ interface IHeader {
   format?: {
     moment?: string;
   };
+  render?: Function;
 }
 
 interface ICell {
@@ -41,7 +42,7 @@ export default function MyTable(props: ITables) {
 
   const RenderCell = ({ props, header }: { props: ICell | number | string; header: IHeader }) => {
     const { value, onClick, render } =
-      typeof props === 'object' ? props : { value: props, onClick: undefined, render: undefined };
+      typeof props === 'object' ? props : { value: props, onClick: header.onClick, render: header.render };
     let content = (render && render.call(null, value)) || value;
     if (header.format?.moment) {
       content = moment(content).format(header.format.moment);
