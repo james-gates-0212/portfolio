@@ -53,16 +53,20 @@ const en = {
     },
   },
 
+  table: {
+    noRecords: 'No records',
+  },
+
   entities: {
     user: {
       title: 'User',
       menu: 'User',
       fields: {
         id: 'ID',
-        fullName: 'Full Name',
-        firstName: 'First Name',
-        lastName: 'Last Name',
-        email: 'Email',
+        key: 'Key',
+        value: 'Value',
+        createdAt: 'Created At',
+        updatedAt: 'Updated At',
       },
     },
   },

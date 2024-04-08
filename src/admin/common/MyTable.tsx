@@ -1,5 +1,6 @@
 'use client';
 
+import { classNames } from '@/components/Commons';
 import { i18n } from '@/i18n';
 import { Checkbox, Table } from 'flowbite-react';
 
@@ -8,6 +9,8 @@ interface IHeader {
   label: string;
   onClick?: Function;
   order?: 'asc' | 'desc' | 'none';
+  width?: number;
+  classes?: string[];
 }
 
 interface ICell {
@@ -54,24 +57,33 @@ export default function MyTable(props: ITables) {
       <Table className="text-md font-medium" hoverable={hoverable}>
         <Table.Head>
           {hasCheckBox && (
-            <Table.HeadCell className="p-4">
+            <Table.HeadCell className="p-4" style={{ width: 0 }}>
               <Checkbox />
             </Table.HeadCell>
           )}
-          {(headers || []).map(({ key, label, onClick, order }: IHeader) => (
+          {(headers || []).map(({ key, label, onClick, order, width, classes }: IHeader) => (
             <Table.HeadCell
               key={`table-header-${key}`}
+              className={classNames('whitespace-nowrap', ...(classes || []))}
               onClick={(evt) => {
                 evt.stopPropagation();
                 evt.preventDefault();
                 onClick && onClick.call(null, key, order);
               }}
+              style={{ width }}
             >
               {i18n(label)}
             </Table.HeadCell>
           ))}
         </Table.Head>
         <Table.Body className="divide-y">
+          {(!rows || rows.length === 0) && (
+            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+              <Table.Cell colSpan={headerKeys.length + 1} className="text-center">
+                {i18n('table.noRecords')}
+              </Table.Cell>
+            </Table.Row>
+          )}
           {(rows || []).map((row: IRow, i) => (
             <Table.Row key={`table-row-${i}`} className="bg-white dark:border-gray-700 dark:bg-gray-800">
               {hasCheckBox && (
@@ -79,8 +91,8 @@ export default function MyTable(props: ITables) {
                   <Checkbox />
                 </Table.Cell>
               )}
-              {headerKeys.map((key) => (
-                <Table.Cell key={`table-row-${i}-${key}`}>
+              {headerKeys.map((key, index) => (
+                <Table.Cell key={`table-row-${i}-${key}`} className={classNames(...(headers[index].classes || []))}>
                   <RenderCell props={row[key]} />
                 </Table.Cell>
               ))}

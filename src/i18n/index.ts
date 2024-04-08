@@ -13,20 +13,25 @@ const defaultLanguage = 'en';
 /**
  * Replaces the parameters of a message with the args.
  */
-function format(message, args) {
-  if (!message) {
-    return null;
+function format(message?: string, args?: string[]) {
+  if (!message || !args) {
+    return message || '';
   }
 
-  return message.replace(/{(\d+)}/g, function (match, number) {
-    return typeof args[number] != 'undefined' ? args[number] : match;
+  return message.replace(/{(\d+)}/g, function (match, number: string) {
+    const index = parseInt(number);
+    if (index >= 0 && index < args.length) {
+      return args[index];
+    } else {
+      return match;
+    }
   });
 }
 
 /**
  * Checks if the key exists on the language.
  */
-export const i18nExists = (key) => {
+export const i18nExists = (key: string) => {
   const dictionary = languages[defaultLanguage];
   const message = _get(dictionary, key);
   return Boolean(message);
@@ -35,7 +40,7 @@ export const i18nExists = (key) => {
 /**
  * Returns the translation based on the key.
  */
-export const i18n = (key, ...args) => {
+export const i18n = (key: string, ...args: string[]) => {
   const dictionary = languages[defaultLanguage];
   const message = _get(dictionary, key);
 
