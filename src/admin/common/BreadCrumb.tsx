@@ -8,7 +8,7 @@ interface IBreadCrumbItem {
 
 export default function BreadCrumb({ links }: { links: Array<IBreadCrumbItem> }) {
   return (
-    <Breadcrumb className="mb-5">
+    <Breadcrumb>
       {(links || []).map((link: IBreadCrumbItem, i) => (
         <Breadcrumb.Item key={`breadcrumb-item-${i}`}>
           <Link href={link.href}>{link.name}</Link>

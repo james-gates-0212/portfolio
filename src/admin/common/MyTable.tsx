@@ -3,6 +3,7 @@
 import { classNames } from '@/components/Commons';
 import { i18n } from '@/i18n';
 import { Checkbox, Table } from 'flowbite-react';
+import moment from 'moment';
 
 interface IHeader {
   key: string;
@@ -11,6 +12,9 @@ interface IHeader {
   order?: 'asc' | 'desc' | 'none';
   width?: number;
   classes?: string[];
+  format?: {
+    moment?: string;
+  };
 }
 
 interface ICell {
@@ -35,10 +39,13 @@ export default function MyTable(props: ITables) {
 
   const headerKeys = (headers || []).map((header: IHeader) => header.key);
 
-  const RenderCell = ({ props }: { props: ICell | number | string }) => {
+  const RenderCell = ({ props, header }: { props: ICell | number | string; header: IHeader }) => {
     const { value, onClick, render } =
       typeof props === 'object' ? props : { value: props, onClick: undefined, render: undefined };
-    const content = (render && render.call(null, value)) || value;
+    let content = (render && render.call(null, value)) || value;
+    if (header.format?.moment) {
+      content = moment(content).format(header.format.moment);
+    }
     return (
       <span
         onClick={(evt) => {
@@ -93,7 +100,7 @@ export default function MyTable(props: ITables) {
               )}
               {headerKeys.map((key, index) => (
                 <Table.Cell key={`table-row-${i}-${key}`} className={classNames(...(headers[index].classes || []))}>
-                  <RenderCell props={row[key]} />
+                  <RenderCell props={row[key]} header={headers[index]} />
                 </Table.Cell>
               ))}
             </Table.Row>
