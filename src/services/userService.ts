@@ -8,9 +8,27 @@ export default class UserService extends BaseService {
   }
 
   async getAll() {
-    return await UserRepository.findAndCountAll(
-      { filter: '', limit: undefined, offset: undefined },
-      { language: 'en', currentUser: null, database: this.database, transaction: null },
-    );
+    return await UserRepository.findAndCountAll({ filter: '', limit: undefined, offset: undefined }, this.options);
+  }
+
+  async create(data) {
+    const transaction = await SequelizeRepository.createTransaction(this.database);
+
+    try {
+      const record = await UserRepository.create(data, {
+        ...this.options,
+        transaction,
+      });
+
+      await SequelizeRepository.commitTransaction(transaction);
+
+      return record;
+    } catch (error) {
+      await SequelizeRepository.rollbackTransaction(transaction);
+
+      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'user');
+
+      throw error;
+    }
   }
 }

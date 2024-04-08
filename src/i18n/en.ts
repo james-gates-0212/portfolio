@@ -57,6 +57,10 @@ const en = {
     noRecords: 'No records',
   },
 
+  common: {
+    addNew: 'Add new',
+  },
+
   entities: {
     user: {
       title: 'User',

@@ -1,7 +1,8 @@
 import { IRepositoryOptions } from '@/database/repositories/IRepositoryOptions';
-import BaseRepository from '@/database/repositories/baseRepository';
-import SequelizeRepository from '@/database/repositories/sequelizeRepostiory';
 import { Op } from 'sequelize';
+import BaseRepository from '@/database/repositories/baseRepository';
+import Error404 from '@/errors/Error404';
+import SequelizeRepository from '@/database/repositories/sequelizeRepostiory';
 
 export default class UserRepository extends BaseRepository {
   constructor() {
@@ -23,5 +24,45 @@ export default class UserRepository extends BaseRepository {
     });
 
     return { rows, count };
+  }
+
+  static async findById(id, options: IRepositoryOptions) {
+    const transaction = SequelizeRepository.getTransaction(options);
+
+    const record = await options.database.user.findOne({
+      where: {
+        id,
+      },
+      transaction,
+    });
+
+    if (!record) {
+      throw new Error404();
+    }
+
+    return this._fillWithRelationsAndFiles(record, options, false);
+  }
+
+  static async create(data, options: IRepositoryOptions) {
+    const transaction = SequelizeRepository.getTransaction(options);
+    const record = await options.database.user.create(data, {
+      transaction,
+    });
+
+    return this.findById(record.id, options);
+  }
+
+  static async _fillWithRelationsAndFiles(record, options: IRepositoryOptions, metaOnly = true) {
+    if (!record) {
+      return record;
+    }
+
+    const output = record.get({ plain: true });
+
+    if (metaOnly) {
+      return output;
+    }
+
+    return output;
   }
 }
