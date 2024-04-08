@@ -58,7 +58,12 @@ const en = {
   },
 
   common: {
+    action: 'Action',
     addNew: 'Add new',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    edit: 'Edit',
+    save: 'Save',
   },
 
   entities: {

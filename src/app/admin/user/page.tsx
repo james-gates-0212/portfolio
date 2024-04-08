@@ -74,25 +74,29 @@ export default function Page() {
                   },
                   {
                     key: 'action',
-                    label: '@',
-                    classes: ['whitespace-nowrap', 'text-right'],
+                    label: 'common.action',
+                    classes: ['whitespace-nowrap'],
                     width: 0,
                     render: (value: number) => (
-                      <a
-                        href="#"
-                        className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                        onClick={(evt) => {
-                          evt.preventDefault();
-                          evt.stopPropagation();
-                          if (modal) {
-                            return;
-                          }
-                          console.log('click');
-                          setModal(value);
-                        }}
-                      >
-                        Edit
-                      </a>
+                      <span className="flex flex-row gap-5">
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                          onClick={(evt) => {
+                            evt.preventDefault();
+                            evt.stopPropagation();
+                            if (modal) {
+                              return;
+                            }
+                            setModal(value);
+                          }}
+                        >
+                          {i18n('common.edit')}
+                        </a>
+                        <a href="#" className="font-medium text-red-600 hover:underline dark:text-red-500">
+                          {i18n('common.delete')}
+                        </a>
+                      </span>
                     ),
                   },
                 ]}

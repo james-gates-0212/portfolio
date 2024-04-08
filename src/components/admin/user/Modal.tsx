@@ -1,5 +1,6 @@
 'use client';
 
+import { i18n } from '@/i18n';
 import { Button, Label, Modal, Spinner, TextInput } from 'flowbite-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -40,11 +41,17 @@ export default function UserInfoModal(props) {
   };
 
   useEffect(() => {
-    if (recId <= 0 || loading) {
+    if (recId <= 0) {
+      setData({});
       return;
     }
+
+    if (loading) {
+      return;
+    }
+
     setLoading(true);
-    console.log('here', recId, loading);
+
     fetch(`/api/user/${recId}`, {
       method: 'GET',
       headers: {
@@ -88,10 +95,10 @@ export default function UserInfoModal(props) {
       </Modal.Body>
       <Modal.Footer className="justify-center">
         <Button onClick={() => onSave()} isProcessing={saving}>
-          Save
+          {i18n('common.save')}
         </Button>
         <Button color="gray" onClick={() => onClose()} disabled={saving}>
-          Cancel
+          {i18n('common.cancel')}
         </Button>
       </Modal.Footer>
     </Modal>
