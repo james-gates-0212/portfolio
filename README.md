@@ -60,11 +60,6 @@ yarn lint
 prettier --write ./
 ```
 
-```bash
-# if you couldn't run above command line, it would work after run this...
-npm i -g prettier
-```
-
 ## Build or Start project as production
 
 ```bash
@@ -94,27 +89,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Git commit
 
-Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commits.
+> [!NOTE]\
+> Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commits.
 
 e.g.
 
-```commit
-<type>[scope]: <subject>
+```
+{emoji} <type>[scope]: <subject>
 [body]
 [footer]
 ```
 
 ### Types
 
-`type` should be one of belows.
+> [!IMPORTANT]\
+> `type` should be one of belows.
 
-```bash
+```
 add
 adopt
 apply
 build
 chore
 config
+delete
 docs
 feat
 fix
@@ -122,33 +120,89 @@ init
 refactor
 remove
 style
+test
+update
+upgrade
 ```
 
-### Subject
+### Emoji
 
-`subject` should include one of emojis as belows.
+> [!IMPORTANT]\
+> Your commit should start with gitmoji code.\
+> Please check the emoji code on https://gitmoji.dev/
 
-♻️
-⚡️
-✅
-✏️
-✨
-❤️
-⬆️
-⬇️
-⭐️
-🌈
-🎁
-🎉
-🏆
-🐞
-👌
-📓
-📝
-📦
-🔀
-🔖
-🚀
-🚧
-🚨
-🛠️
+| Description                                                   | Emoji | Code                          |
+| :------------------------------------------------------------ | :---: | :---------------------------- |
+| Add a dependency.                                             |  ➕   | `:heavy_plus_sign:`           |
+| Add a failing test.                                           |  🧪   | `:test_tube:`                 |
+| Add or update a .gitignore file.                              |  🙈   | `:see_no_evil:`               |
+| Add or update an easter egg.                                  |  🥚   | `:egg:`                       |
+| Add or update analytics or track code.                        |  📈   | `:chart_with_upwards_trend:`  |
+| Add or update animations and transitions.                     |  💫   | `:dizzy:`                     |
+| Add or update assets.                                         |  🍱   | `:bento:`                     |
+| Add or update business logic.                                 |  👔   | `:necktie:`                   |
+| Add or update CI build system.                                |  👷   | `:construction_worker:`       |
+| Add or update code related to multithreading or concurrency.  |  🧵   | `:thread:`                    |
+| Add or update code related to validation.                     |  🦺   | `:safety_vest:`               |
+| Add or update comments in source code.                        |  💡   | `:bulb:`                      |
+| Add or update compiled files or packages.                     |  📦️  | `:package:`                   |
+| Add or update configuration files.                            |  🔧   | `:wrench:`                    |
+| Add or update contributor(s).                                 |  👥   | `:busts_in_silhouette:`       |
+| Add or update development scripts.                            |  🔨   | `:hammer:`                    |
+| Add or update documentation.                                  |  📝   | `:memo:`                      |
+| Add or update healthcheck.                                    |  🩺   | `:stethoscope:`               |
+| Add or update license.                                        |  📄   | `:page_facing_up:`            |
+| Add or update logs.                                           |  🔊   | `:loud_sound:`                |
+| Add or update secrets.                                        |  🔐   | `:closed_lock_with_key:`      |
+| Add or update seed files.                                     |  🌱   | `:seedling:`                  |
+| Add or update snapshots.                                      |  📸   | `:camera_flash:`              |
+| Add or update text and literals.                              |  💬   | `:speech_balloon:`            |
+| Add or update the UI and style files.                         |  💄   | `:lipstick:`                  |
+| Add or update types.                                          |  🏷️   | `:label:`                     |
+| Add sponsorships or money related infrastructure.             |  💸   | `:money_with_wings:`          |
+| Add, update, or pass tests.                                   |  ✅   | `:white_check_mark:`          |
+| Add, update, or remove feature flags.                         |  🚩   | `:triangular_flag_on_post:`   |
+| Begin a project.                                              |  🎉   | `:tada:`                      |
+| Catch errors.                                                 |  🥅   | `:goal_net:`                  |
+| Critical hotfix.                                              |  🚑️  | `:ambulance:`                 |
+| Data exploration/inspection.                                  |  🧐   | `:monocle_face:`              |
+| Deploy stuff.                                                 |  🚀   | `:rocket:`                    |
+| Deprecate code that needs to be cleaned up.                   |  🗑️   | `:wastebasket:`               |
+| Downgrade dependencies.                                       |  ⬇️   | `:arrow_down:`                |
+| Fix a bug.                                                    |  🐛   | `:bug:`                       |
+| Fix CI Build.                                                 |  💚   | `:green_heart:`               |
+| Fix compiler / linter warnings.                               |  🚨   | `:rotating_light:`            |
+| Fix security or privacy issues.                               |  🔒️  | `:lock:`                      |
+| Fix typos.                                                    |  ✏️   | `:pencil2:`                   |
+| Improve accessibility.                                        |  ♿️   | `:wheelchair:`                |
+| Improve developer experience.                                 |  🧑‍💻   | `:technologist:`              |
+| Improve performance.                                          |  ⚡️  | `:zap:`                       |
+| Improve SEO.                                                  |  🔍️  | `:mag:`                       |
+| Improve structure / format of the code.                       |  🎨   | `:art:`                       |
+| Improve user experience / usability.                          |  🚸   | `:children_crossing:`         |
+| Infrastructure related changes.                               |  🧱   | `:bricks:`                    |
+| Internationalization and localization.                        |  🌐   | `:globe_with_meridians:`      |
+| Introduce breaking changes.                                   |  💥   | `:boom:`                      |
+| Introduce new features.                                       |  ✨   | `:sparkles:`                  |
+| Make architectural changes.                                   |  🏗️   | `:building_construction:`     |
+| Merge branches.                                               |  🔀   | `:twisted_rightwards_arrows:` |
+| Mock things.                                                  |  🤡   | `:clown_face:`                |
+| Move or rename resources (e.g.: files, paths, routes).        |  🚚   | `:truck:`                     |
+| Perform database related changes.                             |  🗃️   | `:card_file_box:`             |
+| Perform experiments.                                          |  ⚗️   | `:alembic:`                   |
+| Pin dependencies to specific versions.                        |  📌   | `:pushpin:`                   |
+| Refactor code.                                                |  ♻️   | `:recycle:`                   |
+| Release / Version tags.                                       |  🔖   | `:bookmark:`                  |
+| Remove a dependency.                                          |  ➖   | `:heavy_minus_sign:`          |
+| Remove code or files.                                         |  🔥   | `:fire:`                      |
+| Remove dead code.                                             |  ⚰️   | `:coffin:`                    |
+| Remove logs.                                                  |  🔇   | `:mute:`                      |
+| Revert changes.                                               |  ⏪️  | `:rewind:`                    |
+| Simple fix for a non-critical issue.                          |  🩹   | `:adhesive_bandage:`          |
+| Update code due to external API changes.                      |  👽️  | `:alien:`                     |
+| Upgrade dependencies.                                         |  ⬆️   | `:arrow_up:`                  |
+| Work in progress.                                             |  🚧   | `:construction:`              |
+| Work on code related to authorization, roles and permissions. |  🛂   | `:passport_control:`          |
+| Work on responsive design.                                    |  📱   | `:iphone:`                    |
+| Write bad code that needs to be improved.                     |  💩   | `:poop:`                      |
+| Write code drunkenly.                                         |  🍻   | `:beers:`                     |
