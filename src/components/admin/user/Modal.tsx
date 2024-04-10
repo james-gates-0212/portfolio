@@ -13,7 +13,7 @@ export default function UserInfoModal(props) {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [data, setData] = useState<IUser>({});
-  const { onClose, recId } = props;
+  const { onClose, recId, handleRefresh } = props;
   const keyInputRef = useRef<HTMLInputElement>(null);
   const valueInputRef = useRef<HTMLInputElement>(null);
 
@@ -33,6 +33,7 @@ export default function UserInfoModal(props) {
       .then(async (response) => {
         setSaving(false);
         onClose();
+        handleRefresh && handleRefresh.call(null);
       })
       .catch((e) => {
         setSaving(false);
@@ -82,13 +83,27 @@ export default function UserInfoModal(props) {
               <div className="mb-2 block">
                 <Label htmlFor="key" value="User Information Key" />
               </div>
-              <TextInput id="key" ref={keyInputRef} placeholder="Key" defaultValue={data.key || ''} required />
+              <TextInput
+                id="key"
+                ref={keyInputRef}
+                placeholder="Key"
+                defaultValue={data.key || ''}
+                disabled={saving}
+                required
+              />
             </div>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="value" value="Value" />
               </div>
-              <TextInput id="value" ref={valueInputRef} placeholder="value" defaultValue={data.value || ''} required />
+              <TextInput
+                id="value"
+                ref={valueInputRef}
+                placeholder="value"
+                defaultValue={data.value || ''}
+                disabled={saving}
+                required
+              />
             </div>
           </div>
         )}

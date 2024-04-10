@@ -144,7 +144,7 @@ export default function Page() {
       )}
       {useMemo(
         () => (
-          <UserInfoModal onClose={() => setModal(null)} recId={modal} />
+          <UserInfoModal onClose={() => setModal(null)} recId={modal} handleRefresh={handleRefreshTable} />
         ),
         [modal],
       )}
