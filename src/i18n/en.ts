@@ -63,7 +63,14 @@ const en = {
     cancel: 'Cancel',
     delete: 'Delete',
     edit: 'Edit',
+    no: 'No',
     save: 'Save',
+    yes: 'Yes',
+  },
+
+  questions: {
+    default: 'Are you sure?',
+    delete: 'Are you sure to delete this?',
   },
 
   entities: {

@@ -75,6 +75,25 @@ export default class UserRepository extends BaseRepository {
     return this.findById(record.id, options);
   }
 
+  static async destroy(id, options: IRepositoryOptions) {
+    const transaction = SequelizeRepository.getTransaction(options);
+
+    const record = await options.database.user.findOne({
+      where: {
+        id,
+      },
+      transaction,
+    });
+
+    if (!record) {
+      throw new Error404();
+    }
+
+    await record.destroy({
+      transaction,
+    });
+  }
+
   static async _fillWithRelationsAndFiles(record, options: IRepositoryOptions, metaOnly = true) {
     if (!record) {
       return record;

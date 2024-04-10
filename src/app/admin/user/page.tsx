@@ -7,16 +7,33 @@ import { useEffect, useMemo, useState } from 'react';
 import BreadCrumb from '@/admin/common/BreadCrumb';
 import MyTable from '@/admin/common/MyTable';
 import UserInfoModal from '@/components/admin/user/Modal';
+import ConfirmModal from '@/admin/common/ConfirmModal';
 
 export default function Page() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
-  const [modal, setModal] = useState<number | null>(null);
+  const [deleteConfirm, setDeleteConfirm] = useState<null | number>(null);
+  const [modal, setModal] = useState<null | number>(null);
 
-  useEffect(() => {
+  const handleCloseDeleteConfirm = () => setDeleteConfirm(null);
+  const handleDeleteConfirm = () => {
     setLoading(true);
+    const delId = deleteConfirm;
+    setDeleteConfirm(null);
 
+    fetch(`/api/user/${delId}`, { method: 'DELETE' })
+      .then(async (response) => {
+        const { rows } = await response.json();
+        setData(rows);
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  const handleRefreshTable = () =>
     fetch('/api/user', {
       method: 'POST',
     })
@@ -28,6 +45,11 @@ export default function Page() {
         console.error(e);
       })
       .finally(() => setLoading(false));
+
+  useEffect(() => {
+    setLoading(true);
+
+    handleRefreshTable();
   }, []);
 
   return (
@@ -93,7 +115,18 @@ export default function Page() {
                         >
                           {i18n('common.edit')}
                         </a>
-                        <a href="#" className="font-medium text-red-600 hover:underline dark:text-red-500">
+                        <a
+                          href="#"
+                          className="font-medium text-red-600 hover:underline dark:text-red-500"
+                          onClick={(evt) => {
+                            evt.preventDefault();
+                            evt.stopPropagation();
+                            if (deleteConfirm) {
+                              return;
+                            }
+                            setDeleteConfirm(value);
+                          }}
+                        >
                           {i18n('common.delete')}
                         </a>
                       </span>
@@ -114,6 +147,17 @@ export default function Page() {
           <UserInfoModal onClose={() => setModal(null)} recId={modal} />
         ),
         [modal],
+      )}
+      {useMemo(
+        () => (
+          <ConfirmModal
+            message="questions.delete"
+            onClose={handleCloseDeleteConfirm}
+            onConfirm={handleDeleteConfirm}
+            show={Boolean(deleteConfirm)}
+          />
+        ),
+        [deleteConfirm],
       )}
     </>
   );

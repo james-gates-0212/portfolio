@@ -56,4 +56,23 @@ export default class UserService extends BaseService {
       throw error;
     }
   }
+
+  async destroy(id) {
+    const transaction = await SequelizeRepository.createTransaction(this.database);
+
+    try {
+      await UserRepository.destroy(id, {
+        ...this.options,
+        transaction,
+      });
+
+      await SequelizeRepository.commitTransaction(transaction);
+    } catch (error) {
+      await SequelizeRepository.rollbackTransaction(transaction);
+
+      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'user');
+
+      throw error;
+    }
+  }
 }

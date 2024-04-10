@@ -44,3 +44,24 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     return Response.json(error);
   }
 }
+
+export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+  try {
+    const service: UserService = new UserService();
+    await service.init();
+
+    const { id } = params;
+
+    const recId = parseInt(id) || 0;
+
+    if (recId > 0) {
+      await service.destroy(recId);
+    }
+
+    const result = await service.getAll();
+
+    return Response.json(result);
+  } catch (error) {
+    return Response.json(error);
+  }
+}
