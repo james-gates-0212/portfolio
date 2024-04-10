@@ -7,6 +7,7 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 });
 
 const nextConfig = withBundleAnalyzer({
+  reactStrictMode: false,
   basePath: process.env.BASE_PATH || '',
   generateBuildId: async () => {
     // This could be anything, using the latest git hash
