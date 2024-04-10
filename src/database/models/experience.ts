@@ -2,14 +2,22 @@ import { DataTypes } from 'sequelize';
 
 export default function model(sequelize) {
   const user = sequelize.define(
-    'user',
+    'experience',
     {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
-      key: {
+      since: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+      },
+      until: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+      },
+      position: {
         type: DataTypes.STRING(128),
         allowNull: false,
         validate: {
@@ -17,19 +25,30 @@ export default function model(sequelize) {
           len: [0, 128],
         },
       },
-      value: {
+      company: {
+        type: DataTypes.STRING(128),
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+          len: [0, 128],
+        },
+      },
+      description: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
-          len: [0, 1024],
+          notEmpty: true,
+          len: [0, 2048],
         },
       },
     },
     {
       indexes: [
         {
-          unique: true,
-          fields: ['key'],
+          fields: ['since'],
+        },
+        {
+          fields: ['until'],
         },
       ],
       timestamps: true,

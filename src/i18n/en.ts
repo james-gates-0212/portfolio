@@ -53,16 +53,36 @@ const en = {
     },
   },
 
+  table: {
+    noRecords: 'No records',
+  },
+
+  common: {
+    action: 'Action',
+    addNew: 'Add new',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    edit: 'Edit',
+    no: 'No',
+    save: 'Save',
+    yes: 'Yes',
+  },
+
+  questions: {
+    default: 'Are you sure?',
+    delete: 'Are you sure to delete this?',
+  },
+
   entities: {
     user: {
       title: 'User',
       menu: 'User',
       fields: {
         id: 'ID',
-        fullName: 'Full Name',
-        firstName: 'First Name',
-        lastName: 'Last Name',
-        email: 'Email',
+        key: 'Key',
+        value: 'Value',
+        createdAt: 'Created At',
+        updatedAt: 'Updated At',
       },
     },
   },

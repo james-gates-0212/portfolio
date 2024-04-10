@@ -6,13 +6,14 @@ import * as pg from 'pg';
 import * as mysql from 'mysql2';
 import * as mariadb from 'mariadb';
 import * as sqlite from 'sqlite';
-import { Sequelize } from 'sequelize';
-import { getConfig } from '@/config';
+import { Dialect, Sequelize } from 'sequelize';
+import { getConfig } from '../../config';
 
 // import models for tables of your database
-import userModel from '@/database/models/user';
+import experienceModel from './experience';
+import userModel from './user';
 
-const dataModels: Array<Function> = [userModel];
+const dataModels: Array<Function> = [experienceModel, userModel];
 
 const databaseModules = {
   postgres: pg,
@@ -21,7 +22,7 @@ const databaseModules = {
   sqlite: sqlite,
 };
 
-const highlight = require('cli-highlight').highlight;
+const highlight: Function = require('cli-highlight').highlight as Function;
 
 function models() {
   const config = getConfig();
@@ -32,10 +33,10 @@ function models() {
     return null;
   }
 
-  let sequelize = new (<any>Sequelize)(config.database.db, config.database.user, config.database.password, {
+  let sequelize = new Sequelize(config.database.db, config.database.user, config.database.password, {
     host: config.database.host,
     port: config.database.port,
-    dialect: config.database.dialect,
+    dialect: config.database.dialect as Dialect,
     dialectModule: databaseModules[config.database.dialect],
     dialectOptions: {
       ssl: config.database.ssl && {
@@ -45,7 +46,7 @@ function models() {
       },
     },
     logging: config.database.logging
-      ? (log) =>
+      ? (log: string) =>
           console.log(
             highlight(log, {
               language: 'sql',

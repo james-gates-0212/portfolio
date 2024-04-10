@@ -7,13 +7,15 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 });
 
 const nextConfig = withBundleAnalyzer({
-  output: 'export',
-  images: { unoptimized: process.env.NODE_ENV === 'development' },
+  reactStrictMode: false,
   basePath: process.env.BASE_PATH || '',
   generateBuildId: async () => {
     // This could be anything, using the latest git hash
     const commitHash = ChildProcess.execSync('git log --pretty=format:"%h" -n1').toString().trim();
     return process.env.GIT_HASH || commitHash;
+  },
+  experimental: {
+    serverComponentsExternalPackages: ['sequelize'],
   },
 });
 
