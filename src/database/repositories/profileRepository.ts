@@ -4,7 +4,7 @@ import BaseRepository from '@/database/repositories/baseRepository';
 import Error404 from '@/errors/Error404';
 import SequelizeRepository from '@/database/repositories/sequelizeRepository';
 
-export default class UserRepository extends BaseRepository {
+export default class ProfileRepository extends BaseRepository {
   constructor() {
     super();
   }
@@ -15,7 +15,7 @@ export default class UserRepository extends BaseRepository {
 
     const where = { [Op.and]: whereAnd };
 
-    let { rows, count } = await options.database.user.findAndCountAll({
+    let { rows, count } = await options.database.profile.findAndCountAll({
       where,
       include,
       limit: limit ? Number(limit) : undefined,
@@ -31,7 +31,7 @@ export default class UserRepository extends BaseRepository {
   static async findById(id, options: IRepositoryOptions) {
     const transaction = SequelizeRepository.getTransaction(options);
 
-    const record = await options.database.user.findOne({
+    const record = await options.database.profile.findOne({
       where: {
         id,
       },
@@ -47,7 +47,7 @@ export default class UserRepository extends BaseRepository {
 
   static async create(data, options: IRepositoryOptions) {
     const transaction = SequelizeRepository.getTransaction(options);
-    const record = await options.database.user.create(data, {
+    const record = await options.database.profile.create(data, {
       transaction,
     });
 
@@ -57,7 +57,7 @@ export default class UserRepository extends BaseRepository {
   static async update(id, data, options: IRepositoryOptions) {
     const transaction = SequelizeRepository.getTransaction(options);
 
-    let record = await options.database.user.findOne({
+    let record = await options.database.profile.findOne({
       where: {
         id,
       },
@@ -78,7 +78,7 @@ export default class UserRepository extends BaseRepository {
   static async destroy(id, options: IRepositoryOptions) {
     const transaction = SequelizeRepository.getTransaction(options);
 
-    const record = await options.database.user.findOne({
+    const record = await options.database.profile.findOne({
       where: {
         id,
       },

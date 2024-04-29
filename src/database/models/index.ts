@@ -11,9 +11,10 @@ import { getConfig } from '../../config';
 
 // import models for tables of your database
 import experienceModel from './experience';
+import profileModel from './profile';
 import userModel from './user';
 
-const dataModels: Array<Function> = [experienceModel, userModel];
+const dataModels: Array<Function> = [experienceModel, profileModel, userModel];
 
 const databaseModules = {
   postgres: pg,

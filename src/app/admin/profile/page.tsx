@@ -6,7 +6,7 @@ import { i18n } from '@/i18n';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import BreadCrumb from '@/admin/common/BreadCrumb';
 import MyTable from '@/admin/common/MyTable';
-import UserInfoModal from '@/components/admin/user/Modal';
+import ProfileInfoModal from '@/components/admin/profile/Modal';
 import ConfirmModal from '@/admin/common/ConfirmModal';
 
 export default function Page() {
@@ -22,7 +22,7 @@ export default function Page() {
     const delId = deleteConfirm;
     setDeleteConfirm(null);
 
-    fetch(`/api/user/${delId}`, { method: 'DELETE' })
+    fetch(`/api/profile/${delId}`, { method: 'DELETE' })
       .then(async (response) => {
         const { rows } = await response.json();
         setData(rows);
@@ -35,7 +35,7 @@ export default function Page() {
 
   const handleRefreshTable = useCallback(
     () =>
-      fetch('/api/user', {
+      fetch('/api/profile', {
         method: 'POST',
       })
         .then(async (response) => {
@@ -64,7 +64,7 @@ export default function Page() {
               <BreadCrumb
                 links={[
                   { href: '/', name: 'Home' },
-                  { href: '#', name: i18n('entities.user.menu') },
+                  { href: '#', name: i18n('entities.profile.menu') },
                 ]}
               />
               <div>
@@ -80,19 +80,26 @@ export default function Page() {
             ) : (
               <MyTable
                 headers={[
-                  { key: 'id', label: 'entities.user.fields.id', classes: ['text-right'], width: 150 },
-                  { key: 'key', label: 'entities.user.fields.key', width: 300 },
-                  { key: 'value', label: 'entities.user.fields.value' },
+                  { key: 'id', label: 'entities.profile.fields.id', classes: ['text-right'], width: 150 },
+                  { key: 'name', label: 'entities.profile.fields.name', width: 300 },
+                  { key: 'description', label: 'entities.profile.fields.description' },
+                  {
+                    key: 'activatedAt',
+                    label: 'entities.profile.fields.activatedAt',
+                    classes: ['whitespace-nowrap', 'text-center'],
+                    width: 0,
+                    format: { moment: DEFAULT_MOMENT_FORMAT },
+                  },
                   {
                     key: 'createdAt',
-                    label: 'entities.user.fields.createdAt',
+                    label: 'entities.profile.fields.createdAt',
                     classes: ['whitespace-nowrap', 'text-center'],
                     width: 0,
                     format: { moment: DEFAULT_MOMENT_FORMAT },
                   },
                   {
                     key: 'updatedAt',
-                    label: 'entities.user.fields.updatedAt',
+                    label: 'entities.profile.fields.updatedAt',
                     classes: ['whitespace-nowrap', 'text-center'],
                     width: 0,
                     format: { moment: DEFAULT_MOMENT_FORMAT },
@@ -147,7 +154,7 @@ export default function Page() {
       )}
       {useMemo(
         () => (
-          <UserInfoModal onClose={() => setModal(null)} recId={modal} handleRefresh={handleRefreshTable} />
+          <ProfileInfoModal onClose={() => setModal(null)} recId={modal} handleRefresh={handleRefreshTable} />
         ),
         [handleRefreshTable, modal],
       )}

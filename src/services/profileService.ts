@@ -1,25 +1,25 @@
 import SequelizeRepository from '@/database/repositories/sequelizeRepository';
-import UserRepository from '@/database/repositories/userRepository';
+import ProfileRepository from '@/database/repositories/profileRepository';
 import BaseService from '@/services/baseService';
 
-export default class UserService extends BaseService {
+export default class ProfileService extends BaseService {
   constructor() {
     super();
   }
 
   async getAll() {
-    return await UserRepository.findAndCountAll({ filter: '', limit: undefined, offset: undefined }, this.options);
+    return await ProfileRepository.findAndCountAll({ filter: '', limit: undefined, offset: undefined }, this.options);
   }
 
   async findById(id) {
-    return await UserRepository.findById(id, this.options);
+    return await ProfileRepository.findById(id, this.options);
   }
 
   async create(data) {
     const transaction = await SequelizeRepository.createTransaction(this.database);
 
     try {
-      const record = await UserRepository.create(data, {
+      const record = await ProfileRepository.create(data, {
         ...this.options,
         transaction,
       });
@@ -30,7 +30,7 @@ export default class UserService extends BaseService {
     } catch (error) {
       await SequelizeRepository.rollbackTransaction(transaction);
 
-      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'user');
+      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'profile');
 
       throw error;
     }
@@ -40,7 +40,7 @@ export default class UserService extends BaseService {
     const transaction = await SequelizeRepository.createTransaction(this.database);
 
     try {
-      const record = await UserRepository.update(id, data, {
+      const record = await ProfileRepository.update(id, data, {
         ...this.options,
         transaction,
       });
@@ -51,7 +51,7 @@ export default class UserService extends BaseService {
     } catch (error) {
       await SequelizeRepository.rollbackTransaction(transaction);
 
-      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'user');
+      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'profile');
 
       throw error;
     }
@@ -61,7 +61,7 @@ export default class UserService extends BaseService {
     const transaction = await SequelizeRepository.createTransaction(this.database);
 
     try {
-      await UserRepository.destroy(id, {
+      await ProfileRepository.destroy(id, {
         ...this.options,
         transaction,
       });
@@ -70,7 +70,7 @@ export default class UserService extends BaseService {
     } catch (error) {
       await SequelizeRepository.rollbackTransaction(transaction);
 
-      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'user');
+      SequelizeRepository.handleUniqueFieldError(error, this.options.language, 'profile');
 
       throw error;
     }

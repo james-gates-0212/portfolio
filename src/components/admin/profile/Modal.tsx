@@ -4,30 +4,30 @@ import { i18n } from '@/i18n';
 import { Button, Label, Modal, Spinner, TextInput } from 'flowbite-react';
 import { useEffect, useRef, useState } from 'react';
 
-interface IUser {
-  key?: string;
-  value?: string;
+interface IProfile {
+  name?: string;
+  description?: string;
 }
 
-export default function UserInfoModal(props) {
+export default function ProfileInfoModal(props) {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [data, setData] = useState<IUser>({});
+  const [data, setData] = useState<IProfile>({});
   const { onClose, recId, handleRefresh } = props;
-  const keyInputRef = useRef<HTMLInputElement>(null);
-  const valueInputRef = useRef<HTMLInputElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const descriptionInputRef = useRef<HTMLInputElement>(null);
 
   const onSave = () => {
     setSaving(true);
 
-    fetch(`/api/user/${recId}`, {
+    fetch(`/api/profile/${recId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        key: keyInputRef.current?.value,
-        value: valueInputRef.current?.value,
+        name: nameInputRef.current?.value,
+        description: descriptionInputRef.current?.value,
       }),
     })
       .then(async (response) => {
@@ -53,7 +53,7 @@ export default function UserInfoModal(props) {
 
     setLoading(true);
 
-    fetch(`/api/user/${recId}`, {
+    fetch(`/api/profile/${recId}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function UserInfoModal(props) {
   }, [recId]);
 
   return (
-    <Modal show={Boolean(recId)} size="md" popup onClose={() => !saving && onClose()} initialFocus={keyInputRef}>
+    <Modal show={Boolean(recId)} size="md" popup onClose={() => !saving && onClose()} initialFocus={nameInputRef}>
       <Modal.Header></Modal.Header>
       <Modal.Body>
         {loading ? (
@@ -81,26 +81,26 @@ export default function UserInfoModal(props) {
           <div className="space-y-6">
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="key" value={i18n('entities.user.fields.key')} />
+                <Label htmlFor="name" value={i18n('entities.profile.fields.name')} />
               </div>
               <TextInput
-                id="key"
-                ref={keyInputRef}
-                placeholder={i18n('entities.user.fields.key')}
-                defaultValue={data.key || ''}
+                id="name"
+                ref={nameInputRef}
+                placeholder={i18n('entities.profile.fields.name')}
+                defaultValue={data.name || ''}
                 disabled={saving}
                 required
               />
             </div>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="value" value={i18n('entities.user.fields.value')} />
+                <Label htmlFor="description" value={i18n('entities.profile.fields.description')} />
               </div>
               <TextInput
-                id="value"
-                ref={valueInputRef}
-                placeholder={i18n('entities.user.fields.value')}
-                defaultValue={data.value || ''}
+                id="description"
+                ref={descriptionInputRef}
+                placeholder={i18n('entities.profile.fields.description')}
+                defaultValue={data.description || ''}
                 disabled={saving}
                 required
               />

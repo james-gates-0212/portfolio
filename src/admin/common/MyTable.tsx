@@ -40,12 +40,16 @@ export default function MyTable(props: ITables) {
 
   const headerKeys = (headers || []).map((header: IHeader) => header.key);
 
-  const RenderCell = ({ props, header }: { props: ICell | number | string; header: IHeader }) => {
+  const RenderCell = ({ props, header }: { props: ICell | number | string | null; header: IHeader }) => {
     const { value, onClick, render } =
-      typeof props === 'object' ? props : { value: props, onClick: header.onClick, render: header.render };
+      props && typeof props === 'object' ? props : { value: props, onClick: header.onClick, render: header.render };
     let content = (render && render.call(null, value)) || value;
-    if (header.format?.moment) {
-      content = moment(content).format(header.format.moment);
+    if (content) {
+      if (header.format?.moment) {
+        content = moment(content).format(header.format.moment);
+      }
+    } else {
+      content = '';
     }
     return (
       <span
