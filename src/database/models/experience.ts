@@ -1,13 +1,17 @@
 import { DataTypes } from 'sequelize';
 
 export default function model(sequelize) {
-  const user = sequelize.define(
+  const experience = sequelize.define(
     'experience',
     {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
+      },
+      profile: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
       },
       since: {
         type: DataTypes.DATEONLY,
@@ -45,6 +49,9 @@ export default function model(sequelize) {
     {
       indexes: [
         {
+          fields: ['profile'],
+        },
+        {
           fields: ['since'],
         },
         {
@@ -55,5 +62,15 @@ export default function model(sequelize) {
     },
   );
 
-  return user;
+  experience.associate = (models) => {
+    models.experience.belongsTo(models.profile, {
+      as: 'profile_fk',
+      constraints: true,
+      foreignKey: 'profile',
+      onDelete: 'NO ACTION',
+      onUpdate: 'NO ACTION',
+    });
+  };
+
+  return experience;
 }
