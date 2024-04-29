@@ -81,12 +81,12 @@ export default function UserInfoModal(props) {
           <div className="space-y-6">
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="key" value="User Information Key" />
+                <Label htmlFor="key" value={i18n('entities.user.fields.key')} />
               </div>
               <TextInput
                 id="key"
                 ref={keyInputRef}
-                placeholder="Key"
+                placeholder={i18n('entities.user.fields.key')}
                 defaultValue={data.key || ''}
                 disabled={saving}
                 required
@@ -94,12 +94,12 @@ export default function UserInfoModal(props) {
             </div>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="value" value="Value" />
+                <Label htmlFor="value" value={i18n('entities.user.fields.value')} />
               </div>
               <TextInput
                 id="value"
                 ref={valueInputRef}
-                placeholder="value"
+                placeholder={i18n('entities.user.fields.value')}
                 defaultValue={data.value || ''}
                 disabled={saving}
                 required
