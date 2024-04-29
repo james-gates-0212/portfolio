@@ -3,7 +3,7 @@
 import { Button, Spinner } from 'flowbite-react';
 import { DEFAULT_MOMENT_FORMAT } from '@/components/Commons';
 import { i18n } from '@/i18n';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import BreadCrumb from '@/admin/common/BreadCrumb';
 import MyTable from '@/admin/common/MyTable';
 import UserInfoModal from '@/components/admin/user/Modal';
@@ -16,8 +16,8 @@ export default function Page() {
   const [deleteConfirm, setDeleteConfirm] = useState<null | number>(null);
   const [modal, setModal] = useState<null | number>(null);
 
-  const handleCloseDeleteConfirm = () => setDeleteConfirm(null);
-  const handleDeleteConfirm = () => {
+  const handleCloseDeleteConfirm = useCallback(() => setDeleteConfirm(null), []);
+  const handleDeleteConfirm = useCallback(() => {
     setLoading(true);
     const delId = deleteConfirm;
     setDeleteConfirm(null);
@@ -31,26 +31,29 @@ export default function Page() {
         console.error(e);
       })
       .finally(() => setLoading(false));
-  };
+  }, [deleteConfirm]);
 
-  const handleRefreshTable = () =>
-    fetch('/api/user', {
-      method: 'POST',
-    })
-      .then(async (response) => {
-        const { rows } = await response.json();
-        setData(rows);
+  const handleRefreshTable = useCallback(
+    () =>
+      fetch('/api/user', {
+        method: 'POST',
       })
-      .catch((e) => {
-        console.error(e);
-      })
-      .finally(() => setLoading(false));
+        .then(async (response) => {
+          const { rows } = await response.json();
+          setData(rows);
+        })
+        .catch((e) => {
+          console.error(e);
+        })
+        .finally(() => setLoading(false)),
+    [],
+  );
 
   useEffect(() => {
     setLoading(true);
 
     handleRefreshTable();
-  }, []);
+  }, [handleRefreshTable]);
 
   return (
     <>
@@ -140,13 +143,13 @@ export default function Page() {
             )}
           </main>
         ),
-        [loading, data],
+        [loading, data, deleteConfirm, modal],
       )}
       {useMemo(
         () => (
           <UserInfoModal onClose={() => setModal(null)} recId={modal} handleRefresh={handleRefreshTable} />
         ),
-        [modal],
+        [handleRefreshTable, modal],
       )}
       {useMemo(
         () => (
@@ -157,7 +160,7 @@ export default function Page() {
             show={Boolean(deleteConfirm)}
           />
         ),
-        [deleteConfirm],
+        [handleCloseDeleteConfirm, handleDeleteConfirm, deleteConfirm],
       )}
     </>
   );
