@@ -74,6 +74,18 @@ const en = {
   },
 
   entities: {
+    profile: {
+      title: 'Profile',
+      menu: 'Profiles',
+      fields: {
+        id: 'ID',
+        name: 'Name',
+        description: 'Description',
+        activatedAt: 'Activated At',
+        createdAt: 'Created At',
+        updatedAt: 'Updated At',
+      },
+    },
     user: {
       title: 'User',
       menu: 'User',
