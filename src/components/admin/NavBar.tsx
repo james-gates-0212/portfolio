@@ -32,7 +32,7 @@ export default function NavBar() {
       </div>
       <Navbar.Collapse>
         {Menus.map(({ label, route }, index) => (
-          <Navbar.Link key={`navbar-item-${index}`} as={Link} href={route}>
+          <Navbar.Link key={`navbar-item-${index}`} as={Link} href={route} active={current === route}>
             {i18n(label)}
           </Navbar.Link>
         ))}
