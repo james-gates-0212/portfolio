@@ -2,7 +2,7 @@ import { IRepositoryOptions } from '@/database/repositories/IRepositoryOptions';
 import { Op } from 'sequelize';
 import BaseRepository from '@/database/repositories/baseRepository';
 import Error404 from '@/errors/Error404';
-import SequelizeRepository from '@/database/repositories/sequelizeRepostiory';
+import SequelizeRepository from '@/database/repositories/sequelizeRepository';
 
 export default class UserRepository extends BaseRepository {
   constructor() {

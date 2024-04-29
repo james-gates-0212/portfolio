@@ -1,4 +1,4 @@
-import SequelizeRepository from '@/database/repositories/sequelizeRepostiory';
+import SequelizeRepository from '@/database/repositories/sequelizeRepository';
 import UserRepository from '@/database/repositories/userRepository';
 import BaseService from '@/services/baseService';
 
