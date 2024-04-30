@@ -21,6 +21,7 @@ type TConfig = {
   };
   node: {
     env: string;
+    devMode: boolean;
   };
   google: {
     verification: string;
@@ -39,6 +40,7 @@ export function getConfig(): TConfig {
     },
     node: {
       env: env.NODE_ENV || 'production',
+      devMode: env.NODE_ENV === 'development',
     },
     google: {
       verification: env.GOOGLE_VERIFICATION || '',
