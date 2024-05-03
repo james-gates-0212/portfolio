@@ -37,11 +37,33 @@ export default function model(sequelize) {
           len: [0, 128],
         },
       },
+      link: {
+        type: DataTypes.STRING(256),
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+          len: [0, 256],
+        },
+      },
+      linkedin: {
+        type: DataTypes.STRING(256),
+        allowNull: true,
+        validate: {
+          len: [0, 256],
+        },
+      },
       description: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
           notEmpty: true,
+          len: [0, 2048],
+        },
+      },
+      explanation: {
+        type: DataTypes.TEXT,
+        allowNull: true,
+        validate: {
           len: [0, 2048],
         },
       },
