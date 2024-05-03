@@ -9,6 +9,10 @@ export const Menus: Array<IMenu> = [
     route: '/admin/profile',
   },
   {
+    label: 'entities.experience.menu',
+    route: '/admin/experience',
+  },
+  {
     label: 'entities.user.menu',
     route: '/admin/user',
   },

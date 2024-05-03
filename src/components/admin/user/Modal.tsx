@@ -1,13 +1,9 @@
 'use client';
 
-import { i18n } from '@/i18n';
 import { Button, Label, Modal, Spinner, TextInput } from 'flowbite-react';
+import { i18n } from '@/i18n';
+import { IUser } from '@/components/Interfaces';
 import { useEffect, useRef, useState } from 'react';
-
-interface IUser {
-  key?: string;
-  value?: string;
-}
 
 export default function UserInfoModal(props) {
   const [loading, setLoading] = useState(false);

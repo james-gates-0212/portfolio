@@ -57,6 +57,9 @@ export default class SequelizeRepository {
 
   static handleUniqueFieldError(error, language, entityName) {
     if (!(error instanceof UniqueConstraintError)) {
+      if (getConfig().node.devMode) {
+        console.error(error);
+      }
       return;
     }
 

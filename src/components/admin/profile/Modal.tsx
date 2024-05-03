@@ -1,13 +1,9 @@
 'use client';
 
-import { i18n } from '@/i18n';
 import { Button, Label, Modal, Spinner, TextInput } from 'flowbite-react';
+import { i18n } from '@/i18n';
+import { IProfile } from '@/components/Interfaces';
 import { useEffect, useRef, useState } from 'react';
-
-interface IProfile {
-  name?: string;
-  description?: string;
-}
 
 export default function ProfileInfoModal(props) {
   const [loading, setLoading] = useState(false);

@@ -74,6 +74,26 @@ const en = {
   },
 
   entities: {
+    experience: {
+      title: 'Experience',
+      menu: 'Experience',
+      fields: {
+        id: 'ID',
+        profile: 'Profile',
+        since: 'Since',
+        until: 'Until',
+        year: 'Year',
+        month: 'Month',
+        position: 'Position',
+        company: 'Company',
+        link: 'Link',
+        linkedin: 'LinkedIn',
+        description: 'Description',
+        explanation: 'Explanation',
+        createdAt: 'Created At',
+        updatedAt: 'Updated At',
+      },
+    },
     profile: {
       title: 'Profile',
       menu: 'Profiles',
