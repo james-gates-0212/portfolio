@@ -1,6 +1,6 @@
 import { ICPGithubIconWhite } from '@icongo/ic';
 import { IUMicrosoftOutlook } from '@icongo/iu';
-import { LGGithubIcon, LGGoogleGmail } from '@icongo/lg';
+import { LGDiscordIcon, LGGithubIcon, LGGoogleGmail } from '@icongo/lg';
 import { VLSkype } from '@icongo/vl';
 
 const LinkInfos = [
@@ -27,6 +27,14 @@ const LinkInfos = [
       light: VLSkype,
     },
     label: 'Skype',
+  },
+  {
+    href: 'https://discordapp.com/users/1199667886340448316',
+    icon: {
+      dark: LGDiscordIcon,
+      light: LGDiscordIcon,
+    },
+    label: "Discord",
   },
   {
     href: 'https://github.com/james-gates-0212',
