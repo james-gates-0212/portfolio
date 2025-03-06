@@ -25,22 +25,22 @@ export default function Page() {
           {
             id: 1,
             fullName: 'Brian Salvatore',
-            firstName: 'James',
-            lastName: 'Gates',
-            email: 'james.gates.0212@gmail.com',
+            firstName: 'Brian',
+            lastName: 'Salvatore',
+            email: 'Salvatore.Brian@gmail.com',
           },
-          {
-            id: 2,
-            fullName: 'Brian Salvatore',
-            firstName: {
-              value: 'James',
-              render: (value) => (
-                <span className="whitespace-nowrap font-medium text-gray-900 dark:text-white">{value}</span>
-              ),
-            },
-            lastName: 'Gates',
-            email: 'pop.runner88@outlook.com',
-          },
+          // {
+          //   id: 2,
+          //   fullName: 'Brian Salvatore',
+          //   firstName: {
+          //     value: 'James',
+          //     render: (value) => (
+          //       <span className="whitespace-nowrap font-medium text-gray-900 dark:text-white">{value}</span>
+          //     ),
+          //   },
+          //   lastName: 'Gates',
+          //   email: 'pop.runner88@outlook.com',
+          // },
         ]}
         hasCheckBox
         hoverable

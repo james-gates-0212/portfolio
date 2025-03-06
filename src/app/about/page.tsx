@@ -32,10 +32,10 @@ export default function Page() {
 
             <p className="text-xl leading-8">
               Hi, everyone, I&apos;m <span className="text-black dark:text-white">Brian Salvatore</span>.<br />
-              I&apos;m <span className="text-black dark:text-white">Senior Full Stack Developer</span> and{' '}
-              <span className="text-black dark:text-white">SEO Expert</span>.
+              I&apos;m <span className="text-black dark:text-white">Senior Full Stack, Blockchain Developer</span> and{' '}
+              <span className="text-black dark:text-white">E-commerce & CMS Expert</span>.
               <br />
-              <br />I have 5+ years&apos; experience for web development. During last years, I had earned many skills to
+              <br />I have 7+ years&apos; experience for web development. During last years, I had earned many skills to
               develop and manage a website and it now helps for a new project to develop in a high quality, rapidly.
               <br />
               <br />I like to work with a simple communication, a clean and optimized code convention, a high quality
