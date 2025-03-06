@@ -24,14 +24,14 @@ export default function Page() {
         rows={[
           {
             id: 1,
-            fullName: 'James Gates',
+            fullName: 'Brian Salvatore',
             firstName: 'James',
             lastName: 'Gates',
             email: 'james.gates.0212@gmail.com',
           },
           {
             id: 2,
-            fullName: 'James Gates',
+            fullName: 'Brian Salvatore',
             firstName: {
               value: 'James',
               render: (value) => (

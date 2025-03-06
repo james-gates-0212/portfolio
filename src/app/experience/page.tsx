@@ -3,7 +3,7 @@ import RootLayout from '@/components/layouts/RootLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'James Gates | Experience & Education',
+  title: 'Brian Salvatore | Experience & Education',
   description: 'I can work full time, 8+ hours a day, 6 days a week. I hope to work with you in a long time.',
   alternates: {
     canonical: '/experience',

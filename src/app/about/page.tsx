@@ -6,7 +6,7 @@ import Skills from '@/components/Skills';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "James Gates | I'm glad to meet you",
+  title: "Brian Salvatore | I'm glad to meet you",
   description:
     'With a simple communication, a clean and optimized code convention, a high quality development for collaboration and maintenance, and a keeping schedules for a project.',
   alternates: {
@@ -26,12 +26,12 @@ export default function Page() {
         <div className="grid md:grid-cols-12 mt-28">
           <div className="md:col-span-7 flex flex-col items-center">
             <h1 className="pb-20 text-center text-4xl">
-              I&apos;m <strong className="text-black dark:text-white">James Gates</strong>, really glad to meet{' '}
+              I&apos;m <strong className="text-black dark:text-white">Brian Salvatore</strong>, really glad to meet{' '}
               <strong className="text-black dark:text-white">you</strong>
             </h1>
 
             <p className="text-xl leading-8">
-              Hi, everyone, I&apos;m <span className="text-black dark:text-white">James Gates</span>.<br />
+              Hi, everyone, I&apos;m <span className="text-black dark:text-white">Brian Salvatore</span>.<br />
               I&apos;m <span className="text-black dark:text-white">Senior Full Stack Developer</span> and{' '}
               <span className="text-black dark:text-white">SEO Expert</span>.
               <br />
