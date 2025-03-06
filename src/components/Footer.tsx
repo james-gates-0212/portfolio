@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="w-full bg-white/10 backdrop-blur-md px-5 py-4 mt-32">
       <div className="grid lg:grid-cols-2 gap-10 container mx-auto">
         <div className="flex flex-col items-center justify-center">
-          <div className="text-base text-white">Copyright &copy; {year} James Gates</div>
+          <div className="text-base text-white">Copyright &copy; {year} Brian Salvatore</div>
         </div>
         <div className="flex flex-col items-center justify-center">
           <ul className="flex flex-row flex-wrap gap-6 items-center justify-center">

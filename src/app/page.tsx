@@ -9,7 +9,7 @@ import style from './style.module.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'James Gates | Senior Full Stack Developer & SEO Expert',
+  title: 'Brian Salvatore | Senior Full Stack Developer & SEO Expert',
   description:
     'As a seasoned Senior Full Stack Developer specializing in SEO and MERN Stack, I offer a proven track record of crafting resilient, intuitive web applications.',
 };
@@ -31,7 +31,7 @@ export default function Page() {
 
             <h1 className="py-2 text-center">
               My name is
-              <strong className="font-bold text-black dark:text-white"> James Gates</strong>
+              <strong className="font-bold text-black dark:text-white"> Brian Salvatore</strong>
             </h1>
 
             <div className="py-14">
