@@ -35,6 +35,7 @@ import {
   VLWordpress,
   VLYelp,
 } from '@icongo/vl';
+import BlockchainIcon from './blockchain.png';
 
 const SkillSetInfos = [
   {
@@ -186,6 +187,10 @@ const SkillSetInfos = [
         icon: VLYelp,
         label: 'Yelp API',
       },
+      {
+        icon: BlockchainIcon,
+        label: 'Blockchain',
+      }
     ],
   },
   {
