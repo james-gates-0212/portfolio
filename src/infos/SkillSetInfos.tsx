@@ -10,6 +10,7 @@ import {
   LGRedux,
   LGWoocommerceIcon,
   LGXampp,
+  CBBlockChain,
 } from '@icongo/lg';
 import { SIMui } from '@icongo/si';
 import { SKAwsDark, SKGithubLight } from '@icongo/sk';
@@ -186,6 +187,10 @@ const SkillSetInfos = [
         icon: VLYelp,
         label: 'Yelp API',
       },
+      {
+        icon: CBBlockChain,
+        label: 'Blockchain',
+      }
     ],
   },
   {
